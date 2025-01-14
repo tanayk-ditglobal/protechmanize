@@ -117,6 +117,12 @@
                 filter: brightness(0) invert(1) !important;
             }
         }
+
+        br {
+            @include breakpoint(ipad-max) {
+                display: none;
+            }
+        }
     }
 
     &-img {

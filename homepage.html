@@ -924,6 +924,11 @@
       }, "normal");
     });
 
+    $("#nav-toggle").click(function () {
+      $('body').toggleClass("overflow-hidden");
+    });
+
+    // search button
     $('#search-btn').click(function () {
       $('.search-box').toggleClass('active');
     });
