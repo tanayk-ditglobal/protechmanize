@@ -78,6 +78,7 @@
         position: relative;
         margin-left: -10px;
         margin-right: 0;
+        white-space: normal;
 
         @include breakpoint(ipad-max) {
             gap: 5px;
