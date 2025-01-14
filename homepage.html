@@ -1,0 +1,977 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <link rel="shortcut icon" href="#">
+  <title>ProTechmanize</title>
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/owl.carousel.min.css">
+  <link rel="stylesheet" href="css/owl.theme.default.min.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+  <!-- header -->
+  <div class="header__wrap">
+    <div class="header-line"></div>
+    <div class="container-fluid">
+      <!-- header top -->
+      <div class="header__top">
+        <div class="input-group search-group">
+          <img src="images/icons/search-normal.svg" class="img-fluid" alt="" loading="lazy">
+          <input type="text" class="form-control" placeholder="Search...">
+        </div>
+        <div class="input-group">
+          <img src="images/icons/global.svg" class="img-fluid" alt="" loading="lazy">
+          <select class="form-select">
+            <option disabled>Country</option>
+            <option value="1" selected>India</option>
+          </select>
+        </div>
+        <label class="theme-switch">
+          <input type="checkbox" hidden>
+          <span class="slider"></span>
+        </label>
+      </div>
+      <!-- /header top -->
+      <!-- main header -->
+      <header class="header">
+        <nav class="navbar navbar-expand-lg navbar-dark">
+          <div class="logo navbar-brand">
+            <img src="images/logo/main-logo.svg" class="img-fluid" alt="" loading="lazy">
+            <div class="logo-text">
+              <span>
+                .VAPT <br>
+                .Network Security <br>
+                .Cloud Security <br>
+                .GRC <br>
+                .SOC <br>
+                .VAPT <br>
+              </span>
+            </div>
+          </div>
+          <div class="header__actions">
+            <button class="btn p-1" id="search-btn"><img src="images/icons/search-normal.svg" class="img-fluid" alt=""
+                loading="lazy"></button>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+              aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="bar"></span>
+              <span class="bar"></span>
+              <span class="bar"></span>
+            </button>
+            <div class="search-box">
+              <input type="text" class="form-control" placeholder="Search Here....">
+            </div>
+          </div>
+
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <div class="navbar-collapse__content">
+              <ul class="navbar-nav">
+                <li class="nav-item">
+                  <a class="nav-link" href="javascript:void(0);">About</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="javascript:void(0);">Services</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="javascript:void(0);">Industries</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="javascript:void(0);">Resources</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="javascript:void(0);">Careers</a>
+                </li>
+              </ul>
+              <div class="contact-us">
+                <a href="javascript:void(0);" class="btn btn-link">Contact Us</a>
+              </div>
+            </div>
+            <div class="mobile-only-action">
+              <div class="input-group">
+                <img src="images/icons/global.svg" class="img-fluid" alt="" loading="lazy">
+                <select class="form-select">
+                  <option disabled>Country</option>
+                  <option value="1" selected>India</option>
+                </select>
+              </div>
+              <label class="theme-switch-2">
+                <input type="checkbox" hidden>
+                <span class="slider"></span>
+              </label>
+            </div>
+          </div>
+        </nav>
+      </header>
+      <!-- /main header -->
+    </div>
+  </div>
+
+  <!-- Banner -->
+  <section class="banner">
+    <div class="container-fluid">
+      <div class="banner__content">
+        <div class="banner__content--title">
+          <h4>Your Cybersecurity</h4>
+          <h1>Copilot</h1>
+          <h5>Consulting | Implementation | Support | Governance</h5>
+          <p>
+            From strategic consulting to seamless implementation and ongoing
+            governance,<br>
+            we provide comprehensive cybersecurity solutions tailored to your
+            business needs.
+          </p>
+          <div class="banner__action">
+            <a href="javascript:void(0);" class="btn btn-link">Secure Your Business <img
+                src="images/icons/long-arrow-right.svg" alt="" loading="lazy"></a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="banner__media">
+      <div class="banner-img">
+        <img src="images/banner-img.png" class="img-fluid" alt="" loading="lazy">
+      </div>
+      <div class="banner-links">
+        <ul class="list-unstyled mb-0">
+          <li>
+            <a href="javascript:void(0);" class="danger"><img src="images/icons/danger.svg" alt="" loading="lazy"
+                class="img-fluid">
+              Under <br>Attack?</a>
+          </li>
+          <li>
+            <a href="javascript:void(0);" class="support"><img src="images/icons/support.svg" alt="" loading="lazy"
+                class="img-fluid">
+              Support</a>
+          </li>
+        </ul>
+      </div>
+      <video muted loop autoplay playsinline class="banner-video" id="video" preload="auto">
+        <source src="video/banner-video.mp4" type="video/mp4">
+      </video>
+    </div>
+  </section>
+
+  <!-- about-us -->
+  <section class="about-us">
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-xl-3 about-us__left--wrap">
+          <ul id="about-us" class="navbar-nav about-us__left">
+            <li class="nav-item">
+              <a class="nav-link" href="#who-we-are">Who we are</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#what-we-do">What We Do</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#why-us">Why Us?</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#we-work-with">We work with</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#client-stories">Client Stories</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#our-partners">Our Partners</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#whats-trending">What’s Trending</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#next-step">Next Step</a>
+            </li>
+          </ul>
+          <div class="about-us__left--scroll-btn">
+            <button class="btn scroll-left"><img src="images/icons/arrow-left.svg" class="img-fluid" alt=""
+                loading="lazy"></button>
+            <button class="btn scroll-right"><img src="images/icons/arrow-right.svg" class="img-fluid" alt=""
+                loading="lazy"></button>
+          </div>
+        </div>
+        <div class="col-xl-9">
+          <div data-bs-spy="scroll" data-bs-target="#about-us" data-bs-offset="0" class="about-us__right" tabindex="0">
+            <!-- who-we-are -->
+            <div id="who-we-are" class="who-we-are">
+              <h3>Your <span>End-to-End</span> Cybersecurity Partner</h3>
+              <p>
+                We are your one-stop cybersecurity partner, offering
+                consulting, implementation, and support designed to meet your
+                unique needs. Our team ensures ongoing support and governance
+                to keep your business protected and compliant.
+              </p>
+              <p>Ready to take your cybersecurity to the next level?</p>
+              <div class="row">
+                <div class="col-xl-4 col-md-6 mb-3">
+                  <div class="who-we-are__content">
+                    <h3>500+</h3>
+                    <span>Cybersecurity Experts</span>
+                  </div>
+                </div>
+                <div class="col-xl-4 col-md-6 mb-3">
+                  <div class="who-we-are__content">
+                    <h3>2 Billion</h3>
+                    <span>Security Events Analyzed Per Day</span>
+                  </div>
+                </div>
+                <div class="col-xl-4 col-md-6 mb-3">
+                  <div class="who-we-are__content">
+                    <h3>100+</h3>
+                    <span>Happy Customers</span>
+                  </div>
+                </div>
+                <div class="col-xl-4 col-md-6 mb-3">
+                  <div class="who-we-are__content">
+                    <h3>100+</h3>
+                    <span>GRC Projects Delivered</span>
+                  </div>
+                </div>
+                <div class="col-xl-4 col-md-6 mb-3">
+                  <div class="who-we-are__content">
+                    <h3>200+</h3>
+                    <span>Security Assessment Done</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- what-we-do -->
+            <div id="what-we-do" class="what-we-do">
+              <h3>What We Do?</h3>
+              <p>
+                Explore our 360° cybersecurity offerings designed to protect,
+                defend, and enhance your digital ecosystem.
+              </p>
+              <ul class="list-unstyled mb-0">
+                <li>
+                  <div class="what-we-do__content">
+                    <div class="what-we-do__content-scroll">
+                      <span>Identify vulnerabilities, assess risks, and achieve
+                        compliance with expert guidance.
+                      </span>
+                      <span>Cybersecurity Assessments and Compliance</span>
+                    </div>
+                    <div class="what-we-do__content-link">
+                      <img src="images/icons/Cyber-Security.svg" class="img-fluid" alt="" loading="lazy">
+                      <a href="javascript:void(0);"><img src="images/icons/long-arrow-right.svg" alt=""
+                          loading="lazy"></a>
+                    </div>
+                  </div>
+                </li>
+                <li>
+                  <div class="what-we-do__content">
+                    <div class="what-we-do__content-scroll">
+                      <span>24/7 managed security solutions to detect, prevent,
+                        and respond to cyber threats.
+                      </span>
+                      <span>Managed Security Services (MSSP)</span>
+                    </div>
+                    <div class="what-we-do__content-link">
+                      <img src="images/icons/MSSP.svg" class="img-fluid" alt="" loading="lazy">
+                      <a href="javascript:void(0);"><img src="images/icons/long-arrow-right.svg" alt=""
+                          loading="lazy"></a>
+                    </div>
+                  </div>
+                </li>
+                <li>
+                  <div class="what-we-do__content">
+                    <div class="what-we-do__content-scroll">
+                      <span>Safeguard sensitive data and ensure secure access
+                        with robust protection solutions.
+                      </span>
+                      <span>Data and Identity Protection</span>
+                    </div>
+                    <div class="what-we-do__content-link">
+                      <img src="images/icons/Data-Protection.svg" class="img-fluid" alt="" loading="lazy">
+                      <a href="javascript:void(0);"><img src="images/icons/long-arrow-right.svg" alt=""
+                          loading="lazy"></a>
+                    </div>
+                  </div>
+                </li>
+                <li>
+                  <div class="what-we-do__content">
+                    <div class="what-we-do__content-scroll">
+                      <span>Design, implement, and manage secure networks to
+                        protect your digital infrastructure.
+                      </span>
+                      <span>Network Security</span>
+                    </div>
+                    <div class="what-we-do__content-link">
+                      <img src="images/icons/Network-Security.svg" class="img-fluid" alt="" loading="lazy">
+                      <a href="javascript:void(0);"><img src="images/icons/long-arrow-right.svg" alt=""
+                          loading="lazy"></a>
+                    </div>
+                  </div>
+                </li>
+                <li>
+                  <div class="what-we-do__content">
+                    <div class="what-we-do__content-scroll">
+                      <span>Secure your cloud environments with advanced tools
+                        and governance frameworks.
+                      </span>
+                      <span>Cloud Security</span>
+                    </div>
+                    <div class="what-we-do__content-link">
+                      <img src="images/icons/Cloud-Security.svg" class="img-fluid" alt="" loading="lazy">
+                      <a href="javascript:void(0);"><img src="images/icons/long-arrow-right.svg" alt=""
+                          loading="lazy"></a>
+                    </div>
+                  </div>
+                </li>
+                <li>
+                  <div class="what-we-do__content">
+                    <div class="what-we-do__content-scroll">
+                      <span>Streamline compliance, manage risks, and implement
+                        security best practice.
+                      </span>
+                      <span>Governance, Risk, and Compliance (GRC)</span>
+                    </div>
+                    <div class="what-we-do__content-link">
+                      <img src="images/icons/Compliance.svg" class="img-fluid" alt="" loading="lazy">
+                      <a href="javascript:void(0);"><img src="images/icons/long-arrow-right.svg" alt=""
+                          loading="lazy"></a>
+                    </div>
+                  </div>
+                </li>
+                <li>
+                  <div class="what-we-do__content">
+                    <div class="what-we-do__content-scroll">
+                      <span>Empower teams with the knowledge to recognize and
+                        mitigate cyber threats effectively.
+                      </span>
+                      <span>Training & Awareness</span>
+                    </div>
+                    <div class="what-we-do__content-link">
+                      <img src="images/icons/Training-Awareness.svg" class="img-fluid" alt="" loading="lazy">
+                      <a href="javascript:void(0);"><img src="images/icons/long-arrow-right.svg" alt=""
+                          loading="lazy"></a>
+                    </div>
+                  </div>
+                </li>
+              </ul>
+            </div>
+
+            <!-- why-us -->
+            <div id="why-us" class="why-us">
+              <!-- business-needs-partner -->
+              <div class="business-needs-partner">
+                <h3 class="mb-5">
+                  <span>Why your business needs</span><br>
+                  a Cybersecurity Partner?
+                </h3>
+                <div class="business-needs-partner__content">
+                  <img src="images/cybersecurity-partner.png" class="img-fluid" alt="" loading="lazy">
+                  <ul class="list-unstyled mb-0">
+                    <li>
+                      <div class="card">
+                        <div class="card-body">
+                          <h3>70%</h3>
+                          <div class="business-needs-partner__text">
+                            Human Error in <br>Breaches
+                          </div>
+                        </div>
+                      </div>
+                      <div class="card">
+                        <div class="card-body">
+                          <h3><span>EVERY</span> 11Sec</h3>
+                          <div class="business-needs-partner__text">
+                            Ransomware <br>Strikes
+                          </div>
+                        </div>
+                      </div>
+                    </li>
+                    <li>
+                      <div class="card">
+                        <div class="card-body">
+                          <h3>$10.5 <span>TRILLION</span></h3>
+                          <div class="business-needs-partner__text">
+                            Cybercrime Cost <br>by 2025
+                          </div>
+                        </div>
+                      </div>
+                      <div class="card">
+                        <div class="card-body">
+                          <h3>60%</h3>
+                          <div class="business-needs-partner__text">
+                            Business Closure <br>Post-Attack
+                          </div>
+                        </div>
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+
+              <!-- take-control -->
+              <div class="take-control">
+                <h3 class="mb-5">
+                  <span>Take control</span> of your Cybersecurity
+                </h3>
+                <div class="card">
+                  <div class="card-body">
+                    <div class="row">
+                      <div class="col-xl-3 col-6 mb-4 mb-xl-0">
+                        <div class="take-control__content">
+                          <div>
+                            <h2>01</h2>
+                            <h4>Understand</h4>
+                            <p>
+                              See where the sensitive data is stored, how it is
+                              used and when it is transferred
+                            </p>
+                          </div>
+                          <b>Know what to protect</b>
+                        </div>
+                      </div>
+                      <div class="col-xl-3 col-6 mb-4 mb-xl-0">
+                        <div class="take-control__content">
+                          <div>
+                            <h2>02</h2>
+                            <h4>Mitigate</h4>
+                            <p>
+                              Uncover high risk users, track unusual data
+                              movements, and develop intelligent risk strategy
+                            </p>
+                          </div>
+                          <b>Be ready for next threat</b>
+                        </div>
+                      </div>
+                      <div class="col-xl-3 col-6">
+                        <div class="take-control__content">
+                          <div>
+                            <h2>03</h2>
+                            <h4>Remediate</h4>
+                            <p>
+                              Address data leaks with real-time alerts, policy
+                              enforcement, and detailed auditing
+                            </p>
+                          </div>
+                          <b>Deal with incidents fast</b>
+                        </div>
+                      </div>
+                      <div class="col-xl-3 col-6">
+                        <div class="take-control__content">
+                          <div>
+                            <h2>04</h2>
+                            <h4>Communicate</h4>
+                            <p>
+                              Articulate your data security posture to
+                              non-technical business stakeholders
+                            </p>
+                          </div>
+                          <b>Explain what's happening</b>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- security-layers -->
+              <div class="security-layers">
+                <h3 class="mb-5">
+                  Build your <span>security layers</span> with us
+                </h3>
+                <ul class="security-layers__list list-unstyled mb-0">
+                  <li>
+                    <div class="security-layers__list-content">
+                      <h5>Data Layer</h5>
+                      <img src="images/icons/date-layer.svg" class="img-fluid" alt="" loading="lazy">
+                    </div>
+                  </li>
+                  <li>
+                    <div class="security-layers__list-content">
+                      <h5>Monitoring Layer</h5>
+                      <img src="images/icons/monitoring-layer.svg" class="img-fluid" alt="" loading="lazy">
+                    </div>
+                  </li>
+                  <li>
+                    <div class="security-layers__list-content">
+                      <h5>Infra Layer</h5>
+                      <img src="images/icons/infra-layer.svg" class="img-fluid" alt="" loading="lazy">
+                    </div>
+                  </li>
+                  <li>
+                    <div class="security-layers__list-content">
+                      <h5>Human Layer</h5>
+                      <img src="images/icons/human-layer.svg" class="img-fluid" alt="" loading="lazy">
+                    </div>
+                  </li>
+                  <li>
+                    <div class="security-layers__list-content">
+                      <h5>Perimeter Layer</h5>
+                      <img src="images/icons/perimeter-layer.svg" class="img-fluid" alt="" loading="lazy">
+                    </div>
+                  </li>
+                  <li>
+                    <div class="security-layers__list-content">
+                      <h5>Application Layer</h5>
+                      <img src="images/icons/application-layer.svg" class="img-fluid" alt="" loading="lazy">
+                    </div>
+                  </li>
+                  <li>
+                    <div class="security-layers__list-content">
+                      <h5>Governance Layer</h5>
+                      <img src="images/icons/governance-layer.svg" class="img-fluid" alt="" loading="lazy">
+                    </div>
+                  </li>
+                </ul>
+              </div>
+            </div>
+
+            <!-- we-work-with -->
+            <div id="we-work-with" class="we-work-with">
+              <div class="row">
+                <div class="col-lg-4">
+                  <h3>We <span>Work</span> With</h3>
+                  <p class="mb-5">
+                    Trusted by leading orgainzations across the world
+                  </p>
+                  <a href="javascript:void(0);" class="btn btn-link">View All Client <img
+                      src="images/icons/long-arrow-right.svg" alt="" loading="lazy"></a>
+                </div>
+                <div class="col-lg-7 ms-lg-5">
+                  <div class="we-work-carousel owl-carousel owl-theme">
+                    <div class="item">
+                      <div class="we-work-with__content">
+                        <div class="card">
+                          <img src="images/we-work-with/IDFC.png" class="img-fluid" alt="" loading="lazy">
+                        </div>
+                        <div class="card">
+                          <img src="images/we-work-with/blue-dart.png" class="img-fluid" alt="" loading="lazy">
+                        </div>
+                        <div class="card">
+                          <img src="images/we-work-with/hdfc-bank.png" class="img-fluid" alt="" loading="lazy">
+                        </div>
+                        <div class="card">
+                          <img src="images/we-work-with/kotak.png" class="img-fluid" alt="" loading="lazy">
+                        </div>
+                        <div class="card">
+                          <img src="images/we-work-with/wockhardt.png" class="img-fluid" alt="" loading="lazy">
+                        </div>
+                        <div class="card">
+                          <img src="images/we-work-with/aditya-birla.png" class="img-fluid" alt="" loading="lazy">
+                        </div>
+                        <div class="card">
+                          <img src="images/we-work-with/icici-prudent.png" class="img-fluid" alt="" loading="lazy">
+                        </div>
+                        <div class="card">
+                          <img src="images/we-work-with/larsen-toubro.png" class="img-fluid" alt="" loading="lazy">
+                        </div>
+                        <div class="card">
+                          <img src="images/we-work-with/iifl.png" class="img-fluid" alt="" loading="lazy">
+                        </div>
+                        <div class="card">
+                          <img src="images/we-work-with/mirae-asset.png" class="img-fluid" alt="" loading="lazy">
+                        </div>
+                        <div class="card">
+                          <img src="images/we-work-with/jsw.png" class="img-fluid" alt="" loading="lazy">
+                        </div>
+                        <div class="card">
+                          <img src="images/we-work-with/siemens.png" class="img-fluid" alt="" loading="lazy">
+                        </div>
+                      </div>
+                    </div>
+                    <div class="item">
+                      <div class="we-work-with__content">
+                        <div class="card">
+                          <img src="images/we-work-with/IDFC.png" class="img-fluid" alt="" loading="lazy">
+                        </div>
+                        <div class="card">
+                          <img src="images/we-work-with/blue-dart.png" class="img-fluid" alt="" loading="lazy">
+                        </div>
+                        <div class="card">
+                          <img src="images/we-work-with/hdfc-bank.png" class="img-fluid" alt="" loading="lazy">
+                        </div>
+                        <div class="card">
+                          <img src="images/we-work-with/kotak.png" class="img-fluid" alt="" loading="lazy">
+                        </div>
+                        <div class="card">
+                          <img src="images/we-work-with/wockhardt.png" class="img-fluid" alt="" loading="lazy">
+                        </div>
+                        <div class="card">
+                          <img src="images/we-work-with/aditya-birla.png" class="img-fluid" alt="" loading="lazy">
+                        </div>
+                        <div class="card">
+                          <img src="images/we-work-with/icici-prudent.png" class="img-fluid" alt="" loading="lazy">
+                        </div>
+                        <div class="card">
+                          <img src="images/we-work-with/larsen-toubro.png" class="img-fluid" alt="" loading="lazy">
+                        </div>
+                        <div class="card">
+                          <img src="images/we-work-with/iifl.png" class="img-fluid" alt="" loading="lazy">
+                        </div>
+                        <div class="card">
+                          <img src="images/we-work-with/mirae-asset.png" class="img-fluid" alt="" loading="lazy">
+                        </div>
+                        <div class="card">
+                          <img src="images/we-work-with/jsw.png" class="img-fluid" alt="" loading="lazy">
+                        </div>
+                        <div class="card">
+                          <img src="images/we-work-with/siemens.png" class="img-fluid" alt="" loading="lazy">
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- client-stories -->
+            <div id="client-stories" class="client-stories">
+              <div class="client-stories__top">
+                <h3>Client <span>Stories</span></h3>
+                <a href="javascript:void(0);" class="btn btn-link text-nowrap">View All Stories <img
+                    src="images/icons/long-arrow-right.svg" alt="" loading="lazy"></a>
+              </div>
+              <div class="client-stories__content">
+                <div class="client-stories__content--left">
+                  <img src="images/client-story-yunda-express.png" class="img-fluid" alt="" loading="lazy">
+                </div>
+                <div class="client-stories__content--right">
+                  <a href="javascipr:void(0);">
+                    <h4>Yunda Express</h4>
+                    <p>
+                      Yunda Express achieved a 6 times faster response time to
+                      security incidents after building a consolidated security
+                      architecture with Cybersecurity
+                    </p>
+                    <img src="images/icons/long-arrow-right.svg" alt="" loading="lazy">
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            <!-- our-partners -->
+            <div id="our-partners" class="our-partners">
+              <h3>
+                We’ve partnered with over <span>50+</span> leading technology
+                companies
+              </h3>
+              <ul class="our-partners__list list-unstyled mb-0">
+                <li>
+                  <div class="our-partners__list-content">
+                    <h5>Aquila</h5>
+                  </div>
+                </li>
+                <li>
+                  <div class="our-partners__list-content">
+                    <h5>SentinelOne</h5>
+                  </div>
+                </li>
+                <li>
+                  <div class="our-partners__list-content">
+                    <h5>Fortinet</h5>
+                  </div>
+                </li>
+                <li>
+                  <div class="our-partners__list-content">
+                    <h5>Commvault</h5>
+                  </div>
+                </li>
+                <li>
+                  <div class="our-partners__list-content">
+                    <h5>F5</h5>
+                  </div>
+                </li>
+                <li>
+                  <div class="our-partners__list-content">
+                    <h5>Sectona</h5>
+                  </div>
+                </li>
+                <li>
+                  <div class="our-partners__list-content">
+                    <h5>Thales</h5>
+                  </div>
+                </li>
+                <li>
+                  <div class="our-partners__list-content">
+                    <h5>ManageEngine</h5>
+                  </div>
+                </li>
+                <li>
+                  <div class="our-partners__list-content">
+                    <h5>BeyondTrust</h5>
+                  </div>
+                </li>
+                <li>
+                  <div class="our-partners__list-content">
+                    <h5>Netskope</h5>
+                  </div>
+                </li>
+                <li>
+                  <div class="our-partners__list-content">
+                    <h5>Trellix</h5>
+                  </div>
+                </li>
+                <li>
+                  <div class="our-partners__list-content">
+                    <h5>Acronis</h5>
+                  </div>
+                </li>
+                <li>
+                  <div class="our-partners__list-content">
+                    <h5>Okta</h5>
+                  </div>
+                </li>
+                <li>
+                  <div class="our-partners__list-content">
+                    <h5>Morphisec</h5>
+                  </div>
+                </li>
+                <li>
+                  <div class="our-partners__list-content">
+                    <h5>Infoblox</h5>
+                  </div>
+                </li>
+                <li>
+                  <div class="our-partners__list-content">
+                    <h5>Fortra</h5>
+                  </div>
+                </li>
+              </ul>
+            </div>
+
+            <!-- whats-trending -->
+            <div id="whats-trending" class="whats-trending">
+              <h3>What’s Trending With <span>Cybersecurity</span></h3>
+              <div class="row mt-5">
+                <div class="col-lg-4 col-md-6 mb-0 col-lg-4">
+                  <div class="whats-trending__content">
+                    <div>
+                      <span class="badge">Cloud</span>
+                      <p>How to clean up inefficient, costly cloud networks</p>
+                    </div>
+                    <a href="javascript:void(0);">Read the article <img src="images/icons/long-arrow-right.svg" alt=""
+                        loading="lazy"></a>
+                  </div>
+                </div>
+                <div class="col-lg-4 col-md-6 mb-0 col-lg-4">
+                  <div class="whats-trending__content">
+                    <div>
+                      <span class="badge">Data & AI</span>
+                      <p>5 critical lessons AIOps deployment can teach you about IT transformations</p>
+                    </div>
+                    <a href="javascript:void(0);">Read the article <img src="images/icons/long-arrow-right.svg" alt=""
+                        loading="lazy"></a>
+                  </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                  <div class="whats-trending__content">
+                    <div>
+                      <span class="badge">Data & AI</span>
+                      <p>Data product management: Data overload to data enabled in 3 steps</p>
+                    </div>
+                    <a href="javascript:void(0);">Read the article <img src="images/icons/long-arrow-right.svg" alt=""
+                        loading="lazy"></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- next-step -->
+            <div id="next-step" class="next-step">
+              <div class="next-step__top">
+                <h3>Next <span>Steps</span></h3>
+                <img src="images/icons/Infographic.svg" class="img-fluid" alt="" loading="lazy">
+              </div>
+              <div class="row">
+                <div class="col-md-6 mb-5 col-md-0">
+                  <h5>Get a 30-minute, no-cost strategy session with our expert</h5>
+                  <p>Connect with our experts to assess your cybersecurity needs and craft a tailored solution. Let’s
+                    safeguard your business together.</p>
+                  <a href="javascript:void(0);" class="btn btn-link">Book A Consultation <img
+                      src="images/icons/long-arrow-right.svg" alt="" loading="lazy"></a>
+                </div>
+                <div class="col-md-6">
+                  <img src="images/next-step.png" class="img-fluid w-100 d-block" alt="" loading="lazy">
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- newsletter-query -->
+  <section class="newsletter-query">
+    <div class="container-fluid">
+      <div class="newsletter-query__content">
+        <div class="newsletter-query__content-left">
+          <h4>Be the first to know</h4>
+          <p>Sign up to receive the latest information about our organization, platform capabilities, and events</p>
+          <form>
+            <input type="email" class="form-control" placeholder="Business Email">
+            <button class="btn btn-outline-light mt-4">Submit <img src="images/icons/long-arrow-right.svg" alt=""
+                loading="lazy"></button>
+          </form>
+        </div>
+        <div class="newsletter-query__content-right">
+          <h4>Get in touch</h4>
+          <p>Have a query? We’re just a click away.</p>
+          <div class="query-links">
+            <ul class="list-unstyled mb-0">
+              <li>
+                Call <a href="tel:+9100000000">+91 0000 0000</a>
+              </li>
+              <li>
+                Get help <a href="mail:cybersecurity@helpline.abc">cybersecurity@helpline.abc</a>
+              </li>
+              <li>
+                For more information, <a href="javascript:void(0);">click here</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- footer -->
+  <section class="footer__wrap">
+    <div class="container-fluid">
+      <h2>You Deserve The Best Security!</h2>
+      <footer class="footer">
+        <div class="social-links">
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link" href="javascript:void(0);">
+                <img src="images/social-icon/Twitter.svg" class="img-fluid" alt="" loading="lazy">
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="javascript:void(0);">
+                <img src="images/social-icon/LinkedIn.svg" class="img-fluid" alt="" loading="lazy">
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="javascript:void(0);">
+                <img src="images/social-icon/FB.svg" class="img-fluid" alt="" loading="lazy">
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="javascript:void(0);">
+                <img src="images/social-icon/Insta.svg" class="img-fluid" alt="" loading="lazy">
+              </a>
+            </li>
+          </ul>
+        </div>
+        <div class="footer__links">
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link" href="javascript:void(0);">About</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="javascript:void(0);">Services</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="javascript:void(0);">Industries</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="javascript:void(0);">Resources</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="javascript:void(0);">Careers</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="javascript:void(0);">Privacy</a>
+            </li>
+          </ul>
+        </div>
+        <div class="copyright">
+          Proudly created in INDIA.<br>
+          All right reserved, all wrong reversed.
+        </div>
+      </footer>
+    </div>
+  </section>
+
+  <script src="js/jquery.min.js"></script>
+  <script src="js/owl.carousel.min.js"></script>
+  <script src="js/bootstrap.bundle.min.js"></script>
+
+  <script>
+    // owl carosuel
+    $(".we-work-carousel").owlCarousel({
+      loop: true,
+      dots: true,
+      margin: 10,
+      items: 1,
+      loop: false,
+      navText: ["<img src='images/icons/arrow-left.svg' alt=''>", "<img src='images/icons/arrow-right.svg' alt=''>"],
+      responsive: {
+        992: {
+          nav: true,
+        },
+      }
+    });
+
+    // scroll buttons
+    $('.scroll-left').click(function () {
+      $('.about-us__left').animate({
+        scrollLeft: "-=175px"
+      }, "normal");
+    });
+
+    $('.scroll-right').click(function () {
+      $('.about-us__left').animate({
+        scrollLeft: "+=175px"
+      }, "normal");
+    });
+
+    $('#search-btn').click(function () {
+      $('.search-box').toggleClass('active');
+    });
+
+    // light and dark theme switch desktop
+    const toggleSwitch = document.querySelector('.theme-switch input[type="checkbox"]');
+    const currentTheme = localStorage.getItem('theme');
+    if (currentTheme) {
+      document.documentElement.setAttribute('data-theme', currentTheme);
+
+      if (currentTheme === 'light') {
+        toggleSwitch.checked = true;
+      }
+    }
+    function switchTheme(e) {
+      if (e.target.checked) {
+        document.documentElement.setAttribute('data-theme', 'light');
+        localStorage.setItem('theme', 'light');
+      }
+      else {
+        document.documentElement.setAttribute('data-theme', 'dark');
+        localStorage.setItem('theme', 'dark');
+      }
+    }
+    toggleSwitch.addEventListener('change', switchTheme, false);
+
+    // light and dark theme switch mobile
+    const toggleSwitch2 = document.querySelector('.theme-switch-2 input[type="checkbox"]');
+    const currentTheme2 = localStorage.getItem('theme');
+    if (currentTheme) {
+      document.documentElement.setAttribute('data-theme', currentTheme);
+
+      if (currentTheme === 'light') {
+        toggleSwitch2.checked = true;
+      }
+    }
+    function switchTheme(e) {
+      if (e.target.checked) {
+        document.documentElement.setAttribute('data-theme', 'light');
+        localStorage.setItem('theme', 'light');
+      }
+      else {
+        document.documentElement.setAttribute('data-theme', 'dark');
+        localStorage.setItem('theme', 'dark');
+      }
+    }
+    toggleSwitch2.addEventListener('change', switchTheme, false);
+  </script>
+</body>
+
+</html>

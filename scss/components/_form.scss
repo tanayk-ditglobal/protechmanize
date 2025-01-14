@@ -1,0 +1,103 @@
+// common form design
+.form {
+	&-control {
+		outline: none !important;
+		box-shadow: none !important;
+
+		&::-webkit-input-placeholder { 
+			color: $form-label-color;
+		}
+		  
+		&:-ms-input-placeholder { 
+			color: $form-label-color;
+		}
+		  
+		&::placeholder {
+			color: $form-label-color;
+		}
+	}
+
+	&-select {
+		height: 40px;
+		min-height: 40px;
+		outline: none !important;
+		box-shadow: none !important;
+	}
+}
+
+// theme switch
+.theme-switch {
+	display: flex;
+	align-items: center;
+	gap: 5px;
+	position: relative;
+	padding-left: 25px;
+
+	.slider {
+		width: 52px;
+		height: 26px;
+		border-radius: 20px;
+		cursor: pointer;
+		position: relative;
+		border: 1px solid var(--body-color);
+
+		&::before {
+			content: "";
+			position: absolute;
+			height: 12px;
+			width: 12px;
+			top: 50%;
+			transform: translateY(-50%);
+			right: 8px;
+			background: linear-gradient(180deg, #97abff -30.33%, #ae00ff 109.02%);
+			border-radius: 50%;
+			transition: 0.4s;
+		}
+	}
+
+	input:checked {
+		+ .slider {
+			&::before {
+				transform: translateY(-50%) translateX(-23px);
+			}
+		}
+	}
+}
+
+.theme-switch-2 {
+	display: flex;
+	align-items: center;
+	gap: 5px;
+	position: relative;
+	padding-left: 25px;
+
+	.slider {
+		width: 52px;
+		height: 26px;
+		border-radius: 20px;
+		cursor: pointer;
+		position: relative;
+		border: 1px solid var(--body-color);
+
+		&::before {
+			content: "";
+			position: absolute;
+			height: 12px;
+			width: 12px;
+			top: 50%;
+			transform: translateY(-50%);
+			right: 8px;
+			background: linear-gradient(180deg, #97abff -30.33%, #ae00ff 109.02%);
+			border-radius: 50%;
+			transition: 0.4s;
+		}
+	}
+
+	input:checked {
+		+ .slider {
+			&::before {
+				transform: translateY(-50%) translateX(-23px);
+			}
+		}
+	}
+}

@@ -1,0 +1,231 @@
+.banner {
+    height: 90dvh;
+    position: relative;
+
+    @include breakpoint(ipad-max) {
+        height: auto;
+        padding-top: 63px;
+        background-color: #111;
+    }
+
+    &-video {
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+        pointer-events: none;
+        display: block;
+    }
+
+    &__content {
+        position: absolute;
+        top: 45%;
+        transform: translateY(-50%);
+        z-index: 1;
+
+        @include breakpoint(ipad-max) {
+            position: static;
+            transform: none;
+            padding: 40px 0;
+        }
+
+        h4 {
+            @include font-size(45px);
+            font-weight: 300;
+            margin-bottom: 10px;
+            line-height: 1;
+            color: $white;
+
+            @media screen and (min-width: 1441px) {
+                font-size: 53px;
+            }
+
+            @media screen and (min-width: 1681px) {
+                font-size: 64px;
+            }
+
+            @include breakpoint(mobile-max) {
+                @include font-size(40px);
+            }
+        }
+
+        h1 {
+            @include font-size(118px);
+            @extend .text-gradient;
+            font-weight: 300;
+            margin-bottom: 20px;
+
+            @media screen and (min-width: 1441px) {
+                font-size: 138px;
+            }
+
+            @media screen and (min-width: 1681px) {
+                font-size: 166px;
+            }
+
+            @include breakpoint(mobile-max) {
+                @include font-size(100px);
+            }
+        }
+
+        h5 {
+            @include font-size(25px);
+            margin-bottom: 20px;
+            font-weight: 500;
+            color: $white;
+
+            @media screen and (min-width: 1441px) {
+                font-size: 30px;
+            }
+            @media screen and (min-width: 1681px) {
+                font-size: 36px;
+            }
+
+            @include breakpoint(mobile-max) {
+                @include font-size(22px);
+            }
+        }
+
+        p {
+            @include font-size(17px);
+            font-weight: 300;
+            word-spacing: 2px;
+            margin-bottom: 20px;
+            color: $white;
+
+            @media screen and (min-width: 1441px) {
+                font-size: 20px;
+            }
+
+            @media screen and (min-width: 1681px) {
+                font-size: 24px;
+            }
+        }
+
+        .btn-link {
+            background-color: #111;
+            color: $white !important;
+
+            &:hover {
+                background-color: transparent;
+            }
+
+            img {
+                filter: brightness(0) invert(1) !important;
+            }
+        }
+    }
+
+    &-img {
+        position: absolute;
+        right: 0;
+        top: 50%;
+        transform: translateY(-50%);
+        max-width: 650px;
+        width: 100%;
+        pointer-events: none;
+
+        @include breakpoint(desktop-max) {
+            max-width: 450px;
+        }
+
+        @include breakpoint(ipad-max) {
+            top: auto;
+            transform: none;
+            bottom: 0;
+            max-width: 70%;
+        }
+
+        @media screen and (min-width: 1441px) {
+            width: 700px;
+            max-width: none;
+        }
+
+        @media screen and (min-width: 1681px) {
+            width: auto;
+        }
+    }
+
+    &-links {
+        position: absolute;
+        right: 0;
+        top: 50%;
+        transform: translateY(-50%);
+
+        @include breakpoint(ipad-max) {
+            top: -1%;
+        }
+
+        a {
+            display: flex;
+            flex-direction: column;
+            padding: 10px;
+            font-size: 12px;
+            color: $white;
+            align-items: center;
+            text-align: center;
+            line-height: 1.2;
+
+            @media screen and (min-width: 1441px) {
+                font-size: 14px;
+            }
+
+            @media screen and (min-width: 1681px) {
+                font-size: 16px;
+            }
+
+            &.danger {
+                background-color: #ce0303;
+
+                img {
+                    width: 22px;
+                    margin-bottom: 5px;
+
+                    @media screen and (min-width: 1441px) {
+                        width: 26px;
+                    }
+
+                    @media screen and (min-width: 1681px) {
+                        width: 28px;
+                    }
+                }
+            }
+
+            &.support {
+                background-color: #6b6b6b;
+
+                img {
+                    width: 26px;
+                    margin-bottom: 5px;
+
+                    @media screen and (min-width: 1441px) {
+                        width: 28px;
+                    }
+
+                    @media screen and (min-width: 1681px) {
+                        width: 32px;
+                    }
+                }
+            }
+        }
+    }
+
+    &__media {
+        height: 100%;
+        position: relative;
+
+        &::before {
+            content: "";
+            position: absolute;
+            height: 100%;
+            width: 100%;
+            top: 0;
+            left: 0;
+            background: linear-gradient(270deg, rgba(#111, 0) 21.94%, #111 71.3%);
+        }
+    }
+
+    &__action {
+        position: relative;
+        z-index: 1;
+    }
+}

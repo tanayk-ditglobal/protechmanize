@@ -1,0 +1,25 @@
+.search-box {
+    background-color: var(--body-bg);
+    padding: 20px;
+    position: fixed;
+    top: 83px;
+    right: -100%;
+    width: 100%;
+    transition: 0.3s ease-in-out;
+    border-top: 1px solid rgba(#fff, 0.5);
+
+    @include breakpoint(mobile-max) {
+        top: 62px;
+    }
+
+    &.active {
+        right: 0;
+    }
+
+    .form-control {
+        border: none;
+        border-bottom: 1px solid var(--body-color);
+        border-radius: 0;
+        background-color: var(--body-bg);
+    }
+}

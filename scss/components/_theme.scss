@@ -1,0 +1,147 @@
+// light theme colors
+[data-theme="light"] {
+    --primary-color: #7828d6;
+    --secondary-color: #7129f6;
+    --body-bg: #ffffff;
+    --body-color: #111111;
+    --form-input-bg: #ffffff;
+
+    .btn-link {
+        img {
+            filter: brightness(0%);
+        }
+
+        &:hover {
+            color: $white !important;
+
+            img {
+                filter: none;
+            }
+        }
+    }
+
+    .header {
+        &__wrap {
+            background: rgba($white, 0.6);
+        }
+
+        .navbar {
+            &-nav {
+                .nav-link {
+                    text-shadow: 1px 1px 1px rgba($white, 0.6);
+                }
+            }
+        }
+
+        .logo {
+            img {
+                filter: brightness(0);
+            }
+        }
+    }
+
+    .footer {
+        .social-links {
+            .navbar-nav {
+                .nav-link {
+                    img {
+                        filter: brightness(0%);
+                    }
+                }
+            }
+        }
+    }
+
+    .about-us {
+        &__left {
+            &--scroll-btn {
+                .btn {
+                    img {
+                        filter: brightness(0);
+                    }
+                }
+            }
+        }
+
+        .what-we-do {
+            &__content {
+                img {
+                    filter: brightness(0%);
+                }
+
+                &:hover {
+                    img {
+                        filter: none;
+                    }
+                }
+            }
+        }
+
+        .why-us {
+            .security-layers {
+                &__list {
+                    &-content {
+                        img {
+                            filter: brightness(0%);
+                        }
+                    }
+                }
+            }
+        }
+
+        .client-stories {
+            &__content {
+                &--right {
+                    background-color: rgba(111, 111, 111, 0.2);
+
+                    a {
+                        img {
+                            filter: brightness(0%);
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .we-work-carousel {
+        .owl-nav {
+            button {
+                img {
+                    filter: brightness(0);
+                }
+            }
+        }
+    }
+}
+
+// dark theme colors
+[data-theme="dark"] {
+    --primary-color: #7828d6;
+    --secondary-color: #7129f6;
+    --body-bg: #111111;
+    --body-color: #ffffff;
+    --form-input-bg: #ffffff33;
+
+    .header {
+        &__top {
+            .input-group {
+                img {
+                    filter: brightness(0) invert(1);
+                }
+            }
+        }
+
+        &__actions {
+            img {
+                filter: brightness(0) invert(1);
+            }
+        }
+
+        .mobile-only-action {
+            img {
+                filter: brightness(0) invert(1);
+            }
+        }
+    }
+}

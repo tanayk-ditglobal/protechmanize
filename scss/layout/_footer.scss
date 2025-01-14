@@ -1,0 +1,103 @@
+.footer {
+    border-top: 1px solid #FFFFFF42;
+    padding: 10px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    @include breakpoint(ipad-max) {
+        flex-direction: column;
+        gap: 20px;
+        padding: 0 15px;
+    }
+
+    > div {
+        flex: 1;
+    }
+
+    &__wrap {
+        padding: 50px 0;
+
+        h2 {
+            @extend .text-gradient;
+            text-align: center;
+            @include font-size(52px);
+            font-weight: 300;
+            margin-bottom: 50px;
+
+            @media screen and (min-width: 1441px) {
+                font-size: 60px;
+            }
+
+            @media screen and (min-width: 1681px) {
+                font-size: 74px;
+            }
+        }
+    }
+
+    &__links {
+        .navbar-nav {
+            flex-direction: row;
+            justify-content: center;
+            gap: 30px;
+
+            @include breakpoint(mobile-max) {
+                flex-wrap: wrap;
+                gap: 20px;
+            }
+
+            .nav {
+                &-link {
+                    position: relative;
+                    padding: 0;
+                    color: var(--body-color);
+                    display: inline-block;
+    
+                    &::before {
+                        content: '';
+                        position: absolute;
+                        width: 0;
+                        height: 1px;
+                        bottom: 0;
+                        left: 50%;
+                        transform: translateX(-50%);
+                        background-color: var(--body-color);
+                        transition: 0.3s;
+                        transform-origin: center;
+                    }
+    
+                    &:hover {
+                        &::before {
+                            width: 100%;
+                        }
+                    }
+                }
+
+                &-item {
+                    @include breakpoint(mobile-max) {
+                        flex: 28%;
+                        max-width: 28%;
+                        text-align: center;
+                    }
+                }
+            }
+        }
+    }
+
+    .social-links {
+        .navbar-nav {
+            flex-direction: row;
+            gap: 30px;
+        }
+    }
+
+    .copyright {
+        text-align: right;
+        @include font-size(14px);
+        line-height: 1.8;
+
+        @include breakpoint(ipad-max) {
+            text-align: center;
+        }
+    }
+}

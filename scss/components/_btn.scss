@@ -1,0 +1,49 @@
+button {
+	outline: none !important;
+	box-shadow: none !important;
+}
+
+.btn {
+	font-weight: 500;
+	border-radius: 30px;
+	outline: none !important;
+	box-shadow: none !important;
+	transition: 0.3s ease-in-out;
+	@include font-size(15px);
+	padding: 12px 24px;
+
+	&-link {
+		position: relative;
+		background-color: var(--body-bg);
+		color: var(--body-color) !important;
+		text-decoration: none;
+		line-height: 1.5;
+		display: inline-flex;
+		align-items: center;
+		gap: 15px;
+
+		img {
+			position: relative;
+			width: auto;
+			transition: 0.3s;
+		}
+
+		&::before {
+			content: '';
+			position: absolute;
+			left: -2.5px;
+			top: -2.5px;
+			background: linear-gradient(180deg, #0735fa -30.33%, #9473e4 109.02%);
+			width: calc(100% + 5px);
+			height: calc(100% + 5px);
+			z-index: -1;
+			border-radius: 30px;
+		}
+
+		&:hover {
+			img {
+				transform: translateX(8px);
+			}
+		}
+	}
+}

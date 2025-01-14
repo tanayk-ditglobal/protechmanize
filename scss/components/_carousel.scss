@@ -1,0 +1,58 @@
+.we-work-carousel {
+    @include breakpoint(ipad-max) {
+        margin-top: 40px;
+    }
+
+    .owl-nav {
+        button {
+            position: absolute;
+            top: 43%;
+            transform: translateY(-50%);
+            padding: 0;
+
+            img {
+                width: 60px;
+
+                @include breakpoint(ipad-max) {
+                    width: 45px;
+                }
+            }
+
+            &:hover {
+                background-color: transparent !important;
+            }
+
+            &.owl-prev {
+                left: -70px;
+
+                @include breakpoint(ipad-max) {
+                    left: -15px;
+                }
+            }
+
+            &.owl-next {
+                right: -70px;
+
+                @include breakpoint(ipad-max) {
+                    right: -15px;
+                }
+            }
+        }
+
+        .disabled {
+            cursor: not-allowed;
+        }
+    }
+
+    .owl-dots {
+        margin-top: 30px;
+
+        .owl-dot {
+            &.active {
+                span {
+                    background-color: var(--body-color);
+                }
+            }
+        }
+    }
+}

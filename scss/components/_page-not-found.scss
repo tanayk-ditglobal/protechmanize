@@ -1,0 +1,44 @@
+.page-not-found {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: $white;
+    border-radius: 10px;
+    padding-bottom: 70px;
+
+    &__top {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        pointer-events: none;
+
+        span {
+            font-weight: 500;
+            color: #51B8E6;
+            @include font-size(200px);
+            position: relative;
+            z-index: 1;
+
+            &:first-child {
+                margin-right: -120px;
+            }
+
+            &:last-child {
+                margin-left: -120px;
+            }
+        }
+
+        img {
+            max-width: 400px;
+        }
+
+    }
+
+    &__bottom {
+        margin-top: -50px;
+        position: relative;
+        z-index: 1;
+        text-align: center;
+    }
+}
