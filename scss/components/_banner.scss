@@ -4,8 +4,12 @@
 
     @include breakpoint(ipad-max) {
         height: auto;
-        padding-top: 63px;
+        padding-top: 83px;
         background-color: #111;
+    }
+
+    @include breakpoint(mobile-max) {
+        padding-top: 63px;
     }
 
     &-video {
