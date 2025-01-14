@@ -132,6 +132,7 @@
 
     .navbar {
         padding: 0;
+        flex-wrap: nowrap;
 
         &-collapse__content {
             display: flex;
