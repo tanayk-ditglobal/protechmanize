@@ -121,6 +121,7 @@
             span {
                 position: relative;
                 animation: text-animation 8s ease infinite;
+                white-space: nowrap;
             }
         }
     }
