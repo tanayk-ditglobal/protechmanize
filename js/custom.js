@@ -57,6 +57,10 @@ jQuery(document).ready(function ($) {
   $('#close-search-grp').click(function () {
     $(this).parent().removeClass("active");
   });
+
+  $('.navbar-toggler').click(function () {
+    $('body').toggleClass("overflow-hidden");
+  });
 });
 
 // light and dark theme switch desktop

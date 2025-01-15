@@ -21,9 +21,11 @@
     }
 
     .header {
-        // &__wrap {
-        //     background: rgba($white, 0.6);
-        // }
+        &__wrap {
+            @include breakpoint(ipad-max) {
+                border-bottom: 1px solid rgba($black, 0.6);
+            }
+        }
 
         .navbar {
             &-nav {
