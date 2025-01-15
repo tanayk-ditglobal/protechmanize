@@ -55,9 +55,30 @@
         }
 
         .search-group {
-            &:focus-within {
+            position: relative;
+            display: inline-flex;
+            align-items: center;
+
+            .btn {
+                transition: 0.3s ease-in-out;
+                opacity: 0;
+                visibility: hidden;
+                line-height: 1;
+
+                img {
+                    width: 12px;
+                    display: block;
+                }
+            }
+
+            &.active {
                 width: 300px;
                 border-bottom-color: var(--body-color);
+
+                .btn {
+                    opacity: 1;
+                    visibility: visible;
+                }
             }
         }
 

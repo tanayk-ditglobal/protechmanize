@@ -7,13 +7,11 @@
     width: 100%;
     transition: 0.3s ease-in-out;
     border-top: 1px solid rgba(#fff, 0.5);
+    display: flex;
+    align-items: center;
 
     @include breakpoint(mobile-max) {
         top: 52px;
-    }
-
-    &.active {
-        right: 0;
     }
 
     .form-control {
@@ -22,5 +20,22 @@
         border-bottom: 1px solid var(--body-color);
         border-radius: 0;
         background-color: var(--body-bg);
+        padding-right: 30px;
+    }
+
+    .btn {
+        line-height: 1;
+        position: absolute;
+        right: 20px;
+        top: 50%;
+        transform: translateY(-50%);
+
+        img {
+            width: 12px;
+        }
+    }
+
+    &.active {
+        right: 0;
     }
 }

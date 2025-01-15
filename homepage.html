@@ -23,6 +23,7 @@
         <div class="input-group search-group">
           <img src="images/icons/search-normal.svg" class="img-fluid" alt="" loading="lazy">
           <input type="text" class="form-control" placeholder="Search...">
+          <button class="btn p-1" id="close-search-grp"><img src="images/icons/cross.svg" class="img-fluid"></button>
         </div>
         <div class="input-group country-select">
           <img src="images/icons/global.svg" class="img-fluid" alt="" loading="lazy">
@@ -65,6 +66,7 @@
             </button>
             <div class="search-box">
               <input type="text" class="form-control" placeholder="Search Here....">
+              <button class="btn p-1" id="close-search-box"><img src="images/icons/cross.svg" class="img-fluid"></button>
             </div>
           </div>
 
@@ -897,41 +899,53 @@
   <script src="js/bootstrap.bundle.min.js"></script>
 
   <script>
-    // owl carosuel
-    $(".we-work-carousel").owlCarousel({
-      loop: true,
-      dots: true,
-      margin: 10,
-      items: 1,
-      loop: false,
-      navText: ["<img src='images/icons/arrow-left.svg' alt=''>", "<img src='images/icons/arrow-right.svg' alt=''>"],
-      responsive: {
-        992: {
-          nav: true,
-        },
-      }
-    });
+    jQuery(document).ready(function ($) {
+      // owl carosuel
+      $(".we-work-carousel").owlCarousel({
+        loop: true,
+        dots: true,
+        margin: 10,
+        items: 1,
+        loop: false,
+        navText: ["<img src='images/icons/arrow-left.svg' alt=''>", "<img src='images/icons/arrow-right.svg' alt=''>"],
+        responsive: {
+          992: {
+            nav: true,
+          },
+        }
+      });
 
-    // scroll buttons
-    $('.scroll-left').click(function () {
-      $('.about-us__left').animate({
-        scrollLeft: "-=175px"
-      }, "normal");
-    });
+      // scroll buttons
+      $('.scroll-left').click(function () {
+        $('.about-us__left').animate({
+          scrollLeft: "-=175px"
+        }, "normal");
+      });
+      $('.scroll-right').click(function () {
+        $('.about-us__left').animate({
+          scrollLeft: "+=175px"
+        }, "normal");
+      });
 
-    $('.scroll-right').click(function () {
-      $('.about-us__left').animate({
-        scrollLeft: "+=175px"
-      }, "normal");
-    });
+      // $("#nav-toggle").click(function () {
+      //   $('body').toggleClass("overflow-hidden");
+      // });
 
-    // $("#nav-toggle").click(function () {
-    //   $('body').toggleClass("overflow-hidden");
-    // });
+      // search button
+      $('#search-btn').click(function () {
+        $('.search-box').addClass('active');
+      });
+      $('#close-search-box').click(function () {
+        $('.search-box').removeClass('active');
+      });
 
-    // search button
-    $('#search-btn').click(function () {
-      $('.search-box').toggleClass('active');
+      // search-group
+      $(".search-group input").focus(function () {
+        $(this).parent().addClass("active");
+      })
+      $('#close-search-grp').click(function () {
+        $(this).parent().removeClass("active");
+      });
     });
 
     // light and dark theme switch desktop
