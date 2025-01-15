@@ -125,6 +125,14 @@
                 }
             }
         }
+
+        .whats-trending {
+            &__content {
+                img {
+                    filter: brightness(0%);
+                }
+            }
+        }
     }
 
     .we-work-carousel {

@@ -330,6 +330,7 @@
                     transition: 0.3s;
                     @include font-size(18px);
                     height: 100px;
+                    font-weight: 500;
 
                     @media screen and (min-width: 1441px) {
                         font-size: 18px;
