@@ -5,7 +5,8 @@
         position: sticky;
         top: 100px;
         padding-left: 20px;
-        margin-top: 90px;
+        margin-top: 130px;
+        gap: 20px;
 
         @include breakpoint(desktop-max) {
             flex-direction: row;
@@ -168,8 +169,8 @@
 
     &__right {
         > div {
-            padding: 85px 0 50px 0;
-            margin-bottom: 50px;
+            padding: 110px 0;
+            margin-bottom: 100px;
 
             @include breakpoint(ipad-max) {
                 padding: 40px 0;
@@ -182,21 +183,41 @@
     }
 
     .who-we-are {
+        @media screen and (min-width: 1280px) {
+            .row {
+                margin-left: 0;
+                margin-right: 0;
+
+                > * {
+                    padding-left: 0;
+                    padding-right: 0;
+                }
+            }
+        }
         &__content {
             border-top: 1px solid var(--body-color);
             margin: 20px 40px 20px 0;
 
             h3 {
-                font-weight: 200;
+                font-weight: 100;
                 @extend .text-gradient;
                 @include font-size(70px);
 
                 @media screen and (min-width: 1441px) {
-                    font-size: 91px;
+                    font-size: 90px;
                 }
 
                 @media screen and (min-width: 1681px) {
                     font-size: 110px;
+                }
+            }
+
+            span {
+                @include font-size(16px);
+                font-weight: 500;
+
+                @media screen and (min-width: 1441px) {
+                    font-size: 20px;
                 }
             }
         }
@@ -270,6 +291,10 @@
                 min-height: 350px;
             }
 
+            @include breakpoint(mobile-max) {
+                min-height: 250px;
+            }
+
             &::before {
                 content: "";
                 position: absolute;
@@ -287,13 +312,21 @@
                 transition: 0.3s;
                 height: 100px;
                 overflow: hidden;
-                margin-bottom: 20px;
+                margin-bottom: 30px;
+
+                @media screen and (min-width: 1441px) {
+                    height: 100px;
+                }
+
+                @media screen and (min-width: 1280px) {
+                    height: 110px;
+                }
 
                 span {
                     display: block;
-                    margin-bottom: 20px;
+                    margin-bottom: 30px;
                     position: relative;
-                    top: -120px;
+                    top: -130px;
                     transition: 0.3s;
                     @include font-size(18px);
                     height: 100px;
@@ -386,6 +419,14 @@
                 max-width: fit-content;
                 width: 100%;
 
+                @media screen and (min-width: 1441px) {
+                    max-width: 295px;
+                }
+
+                @media screen and (min-width: 1681px) {
+                    max-width: 342px;
+                }
+
                 &-body {
                     display: flex;
                     align-items: center;
@@ -438,14 +479,18 @@
 
             &__text {
                 border-left: 1px solid $black;
-                @include font-size(12px);
+                @include font-size(16px);
                 font-weight: 500;
                 text-align: left;
-                padding-left: 15px;
-                line-height: 2;
+                padding-left: 10px;
+                line-height: 1.8;
                 height: 100%;
                 display: flex;
                 align-items: center;
+
+                @media screen and (min-width: 1681px) {
+                    font-size: 18px;
+                }
 
                 @include breakpoint(ipad-max) {
                     padding-left: 0;
@@ -513,6 +558,7 @@
                 p {
                     color: #666;
                     @include font-size(14px);
+                    margin-bottom: 21px;
 
                     @media screen and (min-width: 1441px) {
                         font-size: 16px;
@@ -527,6 +573,7 @@
                     @include font-size(14px);
                     display: block;
                     position: relative;
+                    padding-top: 21px;
 
                     &::before {
                         content: "";
@@ -536,7 +583,7 @@
                         border-bottom: 1px solid #666;
                         left: 50%;
                         transform: translateX(-50%);
-                        top: -5px;
+                        top: 0;
 
                         @include breakpoint(mobile-max) {
                             width: 100%;
@@ -647,7 +694,7 @@
             }
 
             .card {
-                flex: 22%;
+                flex: 21%;
                 padding-bottom: 22%;
                 position: relative;
 
@@ -881,11 +928,11 @@
 
             a {
                 @include font-size(14px);
-                color: $white;
+                color: var(--body-color);
                 display: inline-flex;
                 align-items: center;
                 gap: 5px;
-                
+
                 img {
                     transition: 0.3s;
                 }

@@ -9,7 +9,7 @@ button {
 	outline: none !important;
 	box-shadow: none !important;
 	transition: 0.3s ease-in-out;
-	@include font-size(15px);
+	@include font-size(16px);
 	padding: 12px 24px;
 
 	&-link {

@@ -24,7 +24,7 @@
         align-items: center;
         justify-content: flex-end;
         gap: 10px;
-        padding: 15px 0 0 0;
+        padding: 14px 0 0 0;
 
         @include breakpoint(ipad-max) {
             display: none;
@@ -79,6 +79,7 @@
         margin-left: -10px;
         margin-right: 0;
         white-space: normal;
+        padding: 2px 0;
 
         @include breakpoint(ipad-max) {
             gap: 5px;
