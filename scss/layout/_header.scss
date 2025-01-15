@@ -335,6 +335,26 @@
             color: var(--body-color);
             text-shadow: 0 1px 0 var(--body-bg);
         }
+
+        .country-select {
+            position: relative;
+
+            .form-select {
+                background: none;
+            }
+
+            &::before {
+                content: '';
+                position: absolute;
+                width: 8px;
+                height: 8px;
+                border-top: 1px solid var(--body-color);
+                border-right: 1px solid var(--body-color);
+                top: 40%;
+                right: 15px;
+                transform: translateY(-50%) rotate(135deg);
+            }
+        }
     }
 }
 
