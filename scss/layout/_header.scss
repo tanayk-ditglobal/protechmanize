@@ -273,7 +273,7 @@
                 position: fixed;
                 height: 100dvh;
                 width: 100%;
-                bottom: 0;
+                top: 0;
                 right: -100%;
                 background-color: var(--body-bg);
                 z-index: 99;
@@ -281,11 +281,11 @@
                 padding: 40px;
 
                 @include breakpoint(ipad-max) {
-                    height: calc(100vh - 72px);
+                    height: calc(100dvh - 72px);
                 }
 
                 @include breakpoint(mobile-max) {
-                    height: calc(100vh - 54px);
+                    height: calc(100dvh - 54px);
                 }
 
                 &.top-adjust {
