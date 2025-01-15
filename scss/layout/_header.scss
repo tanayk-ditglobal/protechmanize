@@ -117,7 +117,7 @@
 
             @include breakpoint(mobile-max) {
                 @include font-size(13px);
-                bottom: 8px;
+                bottom: 6px;
                 left: calc(100% + 5px);
             }
 

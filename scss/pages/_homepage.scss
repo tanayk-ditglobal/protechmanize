@@ -19,7 +19,6 @@
         @include breakpoint(ipad-max) {
             overflow-x: auto;
             overflow-y: hidden;
-            gap: 15px;
             -ms-overflow-style: none;
             scrollbar-width: none;
 
@@ -334,7 +333,7 @@
                     position: relative;
                     top: -130px;
                     transition: 0.3s;
-                    @include font-size(18px);
+                    font-size: 18px;
                     height: 100px;
                     font-weight: 500;
 
@@ -892,7 +891,7 @@
             justify-content: space-between;
 
             .badge {
-                @include font-size(14px);
+                font-size: 14px;
                 position: relative;
                 background-color: var(--body-bg);
                 color: var(--body-color);
@@ -921,7 +920,7 @@
             }
 
             p {
-                @include font-size(16px);
+                font-size: 16px;
                 margin-bottom: 30px;
 
                 @media screen and (min-width: 1441px) {
