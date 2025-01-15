@@ -150,6 +150,20 @@
                 }
             }
         }
+
+        .owl-dots {
+            .owl-dot {
+                span {
+                    background-color: #D0D0D0;
+                }
+    
+                &.active {
+                    span {
+                        background-color: #212121;
+                    }
+                }
+            }
+        }
     }
 
     .text-gradient {

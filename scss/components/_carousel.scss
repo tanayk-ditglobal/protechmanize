@@ -48,9 +48,13 @@
         margin-top: 30px;
 
         .owl-dot {
+            span {
+                background-color: #4A4A4A;
+            }
+
             &.active {
                 span {
-                    background-color: var(--body-color);
+                    background-color: #FFFFFF;
                 }
             }
         }
