@@ -86,7 +86,7 @@
 
             &--wrap {
                 @include breakpoint(desktop-max) {
-                    box-shadow: 0px 4px 14px 0px #0000001A;
+                    box-shadow: 0px 4px 14px 0px #0000001a;
                 }
             }
         }
@@ -114,6 +114,14 @@
                         }
                     }
                 }
+
+                &--action {
+                    .btn {
+                        img {
+                            filter: brightness(0%);
+                        }
+                    }
+                }
             }
 
             .business-needs-partner__content {
@@ -128,7 +136,7 @@
             &__content {
                 &--right {
                     a {
-                        background-color: #F2F2F2;
+                        background-color: #f2f2f2;
                         img {
                             filter: brightness(0%);
                         }
@@ -158,9 +166,9 @@
         .owl-dots {
             .owl-dot {
                 span {
-                    background-color: #D0D0D0;
+                    background-color: #d0d0d0;
                 }
-    
+
                 &.active {
                     span {
                         background-color: #212121;
