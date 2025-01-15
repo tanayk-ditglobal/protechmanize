@@ -144,6 +144,12 @@
             }
         }
     }
+
+    .text-gradient {
+        background: linear-gradient(90.05deg, #38d0dc -1.7%, #b21ebe 33.18%);
+        color: transparent;
+        background-clip: text;
+    }
 }
 
 // dark theme colors
