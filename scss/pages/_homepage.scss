@@ -50,10 +50,11 @@
                 background-color: var(--body-bg);
                 z-index: 9;
                 padding: 10px 35px;
+                box-shadow: 0px 4px 14px 0px #ffffff1a;
             }
 
             @include breakpoint(ipad-max) {
-                top: 70px;
+                top: 71px;
             }
 
             @include breakpoint(mobile-max) {
@@ -101,6 +102,7 @@
             &-link {
                 position: relative;
                 display: inline-block;
+                text-transform: capitalize;
                 color: rgba($color: var(--body-color), $alpha: 0.7);
 
                 &:hover {
@@ -121,7 +123,11 @@
                         border-radius: 10px;
 
                         @include breakpoint(desktop-max) {
-                            display: none;
+                            left: 0;
+                            top: auto;
+                            bottom: 0;
+                            height: 5px;
+                            width: 100%;
                         }
                     }
                 }
@@ -517,7 +523,7 @@
             margin-top: 150px;
 
             .card {
-                background: #F1F1F1;
+                background: #f1f1f1;
             }
 
             &__content {
@@ -528,7 +534,7 @@
                 height: 100%;
 
                 h2 {
-                    color: #F1F1F1;
+                    color: #f1f1f1;
                     text-shadow:
                         1px 1px 1px #9473e4,
                         -1px 1px 1px #0735fa,

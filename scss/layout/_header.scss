@@ -8,8 +8,10 @@
         position: sticky;
         top: -60px;
         z-index: 10;
-        background: rgba(var(--body-color), 0.6);
-        backdrop-filter: blur(25px);
+        background-color: var(--body-bg);
+        border-bottom: 1px solid rgba($black, 0.5);
+        // background: rgba(var(--body-color), 0.6);
+        // backdrop-filter: blur(25px);
 
         @include breakpoint(ipad-max) {
             position: fixed;
