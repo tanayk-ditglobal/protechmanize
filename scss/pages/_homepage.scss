@@ -216,7 +216,7 @@
             margin: 20px 40px 20px 0;
 
             h3 {
-                font-weight: 200;
+                font-weight: 100;
                 @extend .text-gradient;
                 @include font-size(70px);
 
@@ -226,10 +226,6 @@
 
                 @media screen and (min-width: 1681px) {
                     font-size: 110px;
-                }
-
-                @include breakpoint(mobile-max) {
-                    font-weight: 100;
                 }
             }
 
