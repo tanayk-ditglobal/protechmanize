@@ -32,12 +32,6 @@
                 }
             }
         }
-
-        .logo {
-            img {
-                filter: brightness(0);
-            }
-        }
     }
 
     .footer {
@@ -111,13 +105,20 @@
                     }
                 }
             }
+
+            .business-needs-partner__content {
+                .card {
+                    box-shadow: 0px 4px 14px 0px #00000026;
+                    border: none;
+                }
+            }
         }
 
         .client-stories {
             &__content {
                 &--right {
                     a {
-                        background-color: rgba(111, 111, 111, 0.2);
+                        background-color: #F2F2F2;
                         img {
                             filter: brightness(0%);
                         }
@@ -150,6 +151,14 @@
         color: transparent;
         background-clip: text;
     }
+
+    .dark-theme-logo {
+        display: none;
+    }
+
+    .light-theme-logo {
+        display: block;
+    }
 }
 
 // dark theme colors
@@ -180,5 +189,13 @@
                 filter: brightness(0) invert(1);
             }
         }
+    }
+
+    .dark-theme-logo {
+        display: block;
+    }
+
+    .light-theme-logo {
+        display: none;
     }
 }
