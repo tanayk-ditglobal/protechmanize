@@ -52,7 +52,7 @@
                 content: "";
                 position: absolute;
                 width: 100%;
-                height: 83px;
+                height: 70px;
                 background-color: $white;
                 left: 0;
                 top: 0;
@@ -61,7 +61,7 @@
 
         @include breakpoint(mobile-max) {
             &::before {
-                height: 63px;
+                height: 52px;
             }
         }
     }
