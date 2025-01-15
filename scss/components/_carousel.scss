@@ -25,6 +25,10 @@
             &.owl-prev {
                 left: -70px;
 
+                @include breakpoint(desktop-max) {
+                    left: -50px;
+                }
+
                 @include breakpoint(ipad-max) {
                     left: -15px;
                 }
@@ -32,6 +36,10 @@
 
             &.owl-next {
                 right: -70px;
+
+                @include breakpoint(desktop-max) {
+                    right: -50px;
+                }
 
                 @include breakpoint(ipad-max) {
                     right: -15px;

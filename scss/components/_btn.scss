@@ -12,6 +12,10 @@ button {
 	@include font-size(16px);
 	padding: 12px 24px;
 
+	&:active {
+		border-color: transparent !important;
+	}
+
 	&-link {
 		position: relative;
 		background-color: var(--body-bg);

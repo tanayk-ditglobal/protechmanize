@@ -45,7 +45,7 @@
         &--wrap {
             @include breakpoint(desktop-max) {
                 position: sticky;
-                top: 78px;
+                top: 66px;
                 background-color: var(--body-bg);
                 z-index: 9;
                 padding: 10px 35px;
@@ -708,6 +708,29 @@
                         left: -15px;
                         max-width: fit-content;
                     }
+                }
+            }
+
+            &--action {
+                text-align: right;
+                display: none;
+
+                .btn {
+                    padding: 10px;
+
+                    img {
+                        width: auto;
+                    }
+                }
+
+                .security-layers-scroll-left {
+                    img {
+                        transform: rotate(-180deg);
+                    }
+                }
+
+                @include breakpoint(ipad-max) {
+                    display: block;
                 }
             }
         }

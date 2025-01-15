@@ -192,9 +192,9 @@
             </li>
           </ul>
           <div class="about-us__left--scroll-btn">
-            <button class="btn scroll-left"><img src="images/icons/arrow-left.svg" class="img-fluid" alt=""
+            <button class="btn about-us-scroll-left"><img src="images/icons/arrow-left.svg" class="img-fluid" alt=""
                 loading="lazy"></button>
-            <button class="btn scroll-right"><img src="images/icons/arrow-right.svg" class="img-fluid" alt=""
+            <button class="btn about-us-scroll-right"><img src="images/icons/arrow-right.svg" class="img-fluid" alt=""
                 loading="lazy"></button>
           </div>
         </div>
@@ -525,6 +525,10 @@
                     </div>
                   </li>
                 </ul>
+                <div class="security-layers--action">
+                  <button class="btn security-layers-scroll-left"><img src="images/icons/long-arrow-right.svg"></button>
+                  <button class="btn security-layers-scroll-right"><img src="images/icons/long-arrow-right.svg"></button>
+                </div>
               </div>
             </div>
 
@@ -899,101 +903,7 @@
   <script src="js/jquery.min.js"></script>
   <script src="js/owl.carousel.min.js"></script>
   <script src="js/bootstrap.bundle.min.js"></script>
-
-  <script>
-    jQuery(document).ready(function ($) {
-      // owl carosuel
-      $(".we-work-carousel").owlCarousel({
-        loop: true,
-        dots: true,
-        margin: 10,
-        items: 1,
-        loop: false,
-        navText: ["<img src='images/icons/arrow-left.svg' alt=''>", "<img src='images/icons/arrow-right.svg' alt=''>"],
-        responsive: {
-          992: {
-            nav: true,
-          },
-        }
-      });
-
-      // scroll buttons
-      $('.scroll-left').click(function () {
-        $('.about-us__left').animate({
-          scrollLeft: "-=175px"
-        }, "normal");
-      });
-      $('.scroll-right').click(function () {
-        $('.about-us__left').animate({
-          scrollLeft: "+=175px"
-        }, "normal");
-      });
-
-      // $("#nav-toggle").click(function () {
-      //   $('body').toggleClass("overflow-hidden");
-      // });
-
-      // search button
-      $('#search-btn').click(function () {
-        $('.search-box').addClass('active');
-      });
-      $('#close-search-box').click(function () {
-        $('.search-box').removeClass('active');
-      });
-
-      // search-group
-      $(".search-group input").focus(function () {
-        $(this).parent().addClass("active");
-      })
-      $('#close-search-grp').click(function () {
-        $(this).parent().removeClass("active");
-      });
-    });
-
-    // light and dark theme switch desktop
-    const toggleSwitch = document.querySelector('.theme-switch input[type="checkbox"]');
-    const currentTheme = localStorage.getItem('theme');
-    if (currentTheme) {
-      document.documentElement.setAttribute('data-theme', currentTheme);
-
-      if (currentTheme === 'light') {
-        toggleSwitch.checked = true;
-      }
-    }
-    function switchTheme(e) {
-      if (e.target.checked) {
-        document.documentElement.setAttribute('data-theme', 'light');
-        localStorage.setItem('theme', 'light');
-      }
-      else {
-        document.documentElement.setAttribute('data-theme', 'dark');
-        localStorage.setItem('theme', 'dark');
-      }
-    }
-    toggleSwitch.addEventListener('change', switchTheme, false);
-
-    // light and dark theme switch mobile
-    const toggleSwitch2 = document.querySelector('.theme-switch-2 input[type="checkbox"]');
-    const currentTheme2 = localStorage.getItem('theme');
-    if (currentTheme) {
-      document.documentElement.setAttribute('data-theme', currentTheme);
-
-      if (currentTheme === 'light') {
-        toggleSwitch2.checked = true;
-      }
-    }
-    function switchTheme(e) {
-      if (e.target.checked) {
-        document.documentElement.setAttribute('data-theme', 'light');
-        localStorage.setItem('theme', 'light');
-      }
-      else {
-        document.documentElement.setAttribute('data-theme', 'dark');
-        localStorage.setItem('theme', 'dark');
-      }
-    }
-    toggleSwitch2.addEventListener('change', switchTheme, false);
-  </script>
+  <script src="js/custom.js"></script>
 </body>
 
 </html>
