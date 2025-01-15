@@ -9,7 +9,7 @@
         top: -60px;
         z-index: 10;
         background-color: var(--body-bg);
-        
+
         // background: rgba(var(--body-color), 0.6);
         // backdrop-filter: blur(25px);
 
@@ -92,7 +92,7 @@
             }
 
             &::before {
-                content: '';
+                content: "";
                 position: absolute;
                 width: 8px;
                 height: 8px;
@@ -271,22 +271,14 @@
                 align-items: flex-start;
                 justify-content: space-between;
                 position: fixed;
-                height: 100dvh;
+                height: calc(100dvh - 72px);
                 width: 100%;
-                top: 0;
+                bottom: 0;
                 right: -100%;
                 background-color: var(--body-bg);
                 z-index: 99;
                 transition: 0.2s ease-in-out;
                 padding: 40px;
-
-                @include breakpoint(ipad-max) {
-                    height: calc(100dvh - 72px);
-                }
-
-                @include breakpoint(mobile-max) {
-                    height: calc(100dvh - 54px);
-                }
 
                 &.top-adjust {
                     top: 60px;
@@ -295,6 +287,10 @@
                 &.show {
                     right: 0;
                 }
+            }
+
+            @include breakpoint(mobile-max) {
+                height: calc(100dvh - 54px);
             }
         }
     }
@@ -367,7 +363,7 @@
             }
 
             &::before {
-                content: '';
+                content: "";
                 position: absolute;
                 width: 8px;
                 height: 8px;
