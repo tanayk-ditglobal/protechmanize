@@ -72,6 +72,10 @@
 
     .about-us {
         &__left {
+            &::before {
+                background-color: #f1f1f1;
+            }
+
             &--scroll-btn {
                 .btn {
                     img {

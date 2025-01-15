@@ -108,23 +108,35 @@
                     color: var(--body-color);
                 }
 
+                &::before {
+                    content: "";
+                    position: absolute;
+                    left: -20px;
+                    top: 50%;
+                    transform: translateY(-50%);
+                    width: 10px;
+                    height: 0;
+                    background-color: #5183ff;
+                    border-radius: 10px;
+                    transition: 0.3s ease-in-out;
+
+                    @include breakpoint(desktop-max) {
+                        left: 50%;
+                        transform: translateX(-50%);
+                        top: auto;
+                        bottom: 0;
+                        height: 5px;
+                        width: 0;
+                    }
+                }
+
                 &.active {
                     font-weight: 500;
 
                     &::before {
-                        content: "";
-                        position: absolute;
-                        left: -20px;
-                        top: 0;
-                        width: 10px;
                         height: 100%;
-                        background-color: #5183ff;
-                        border-radius: 10px;
 
                         @include breakpoint(desktop-max) {
-                            left: 0;
-                            top: auto;
-                            bottom: 0;
                             height: 5px;
                             width: 100%;
                         }
@@ -178,7 +190,7 @@
             margin-bottom: 100px;
 
             @include breakpoint(ipad-max) {
-                padding: 40px 0;
+                padding: 115px 0 0 0;
             }
 
             @include breakpoint(mobile-max) {
