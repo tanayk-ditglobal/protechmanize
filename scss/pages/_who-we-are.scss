@@ -362,74 +362,6 @@
         }
     }
 
-    .locations {
-        @include breakpoint(mobile-max) {
-            margin-bottom: 60px;
-        }
-
-        .scroll-container {
-            @include breakpoint(mobile-max) {
-                padding-bottom: 30px;
-            }
-
-            @include breakpoint(ipad-min) {
-                cursor: default;
-            }
-
-            .content {
-                gap: 40px;
-
-                @include breakpoint(mobile-max) {
-                    gap: 20px;
-                }
-            }
-
-            .item {
-                flex: 33%;
-                height: 100%;
-                color: var(--body-color);
-
-                @include breakpoint(ipad-min) {
-                    cursor: default;
-                }
-
-                @include breakpoint(mobile-max) {
-                    flex: 50%;
-                    min-width: 50%;
-                }
-
-                &-img {
-                    object-fit: cover;
-                    width: 100%;
-                    display: block;
-                    pointer-events: none;
-                    min-height: 150px;
-                }
-
-                &-footer {
-                    padding: 30px 0px 0px 0px;
-
-                    @include breakpoint(mobile-max) {
-                        padding: 20px 0 0 0;
-                    }
-                }
-
-                span {
-                    font-weight: 500;
-                    @include font-size(22px);
-
-                    @media screen and (min-width: 1441px) {
-                        font-size: 26px;
-                    }
-
-                    @media screen and (min-width: 1681px) {
-                        font-size: 32px;
-                    }
-                }
-            }
-        }
-    }
-
     .history {
         .scroll-container {
             .content {
@@ -446,7 +378,7 @@
                 padding-top: 90px;
 
                 &::before {
-                    content: '';
+                    content: "";
                     width: calc(100% + 40px);
                     height: 1px;
                     background-color: var(--body-color);
@@ -456,10 +388,10 @@
                 }
 
                 &::after {
-                    content: '';
+                    content: "";
                     width: 15px;
                     height: 15px;
-                    background: linear-gradient(88.3deg, #5DECF7 -0.63%, #DC44E9 88.46%);
+                    background: linear-gradient(88.3deg, #5decf7 -0.63%, #dc44e9 88.46%);
                     border-radius: 50%;
                     position: absolute;
                     top: 0;
@@ -476,23 +408,23 @@
                     @include font-size(55px);
                     @extend .text-gradient;
                     font-weight: 100;
-        
+
                     @media screen and (min-width: 1441px) {
                         font-size: 66px;
                     }
-        
+
                     @media screen and (min-width: 1681px) {
                         font-size: 80px;
                     }
                 }
-        
+
                 p {
                     @include font-size(14px);
-        
+
                     @media screen and (min-width: 1441px) {
                         font-size: 16px;
                     }
-        
+
                     @media screen and (min-width: 1681px) {
                         font-size: 20px;
                     }
@@ -500,22 +432,61 @@
             }
         }
     }
-}
 
-.history {
-    &__list {
-        display: flex;
-        overflow-x: auto;
-        gap: 30px;
-        -ms-overflow-style: none; /* IE and Edge */
-        scrollbar-width: none; /* Firefox */
-
-        &::-webkit-scrollbar {
-            display: none;
+    .locations {
+        @include breakpoint(mobile-max) {
+            margin-bottom: 60px;
         }
 
-        li {
-            min-width: 380px;
+        &__content {
+            flex: 33%;
+            height: 100%;
+            color: var(--body-color);
+
+            @include breakpoint(mobile-max) {
+                flex: 50%;
+                min-width: 50%;
+            }
+
+            &-wrap {
+                display: flex;
+                overflow-x: auto;
+                scrollbar-width: none;
+                -ms-overflow-style: none; /* IE and Edge */
+                scrollbar-width: none; /* Firefox */
+                gap: 40px;
+
+                &::-webkit-scrollbar {
+                    display: none;
+                }
+
+                @include breakpoint(mobile-max) {
+                    gap: 20px;
+                }
+            }
+
+            img {
+                object-fit: cover;
+                width: 100%;
+                display: block;
+                pointer-events: none;
+                min-height: 150px;
+            }
+
+            span {
+                font-weight: 500;
+                @include font-size(22px);
+                margin-top: 30px;
+                display: block;
+
+                @media screen and (min-width: 1441px) {
+                    font-size: 26px;
+                }
+
+                @media screen and (min-width: 1681px) {
+                    font-size: 32px;
+                }
+            }
         }
     }
 }
