@@ -59,7 +59,7 @@
                         position: absolute;
                         width: 0;
                         height: 1px;
-                        bottom: 0;
+                        bottom: -5px;
                         left: 50%;
                         transform: translateX(-50%);
                         background-color: var(--body-color);
@@ -70,6 +70,15 @@
                     &:hover {
                         &::before {
                             width: 100%;
+                        }
+                    }
+
+                    &.active {
+                        pointer-events: none;
+
+                        &::before {
+                            width: 100%;
+                            background: linear-gradient(90deg, #5decf7 0%, #dc44e9 41.12%);
                         }
                     }
                 }
