@@ -27,6 +27,10 @@
             @media screen and (min-width: 1681px) {
                 font-size: 26px;
             }
+
+            &:last-child {
+                margin-bottom: 0;
+            }
         }
     }
 

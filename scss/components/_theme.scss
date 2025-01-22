@@ -233,6 +233,16 @@
                 }
             }
         }
+
+        .our-core-services {
+            .accordion {
+                .img-box {
+                    img {
+                        filter: brightness(0);
+                    }
+                }
+            }
+        }
     }
 
     .who-we-are {
