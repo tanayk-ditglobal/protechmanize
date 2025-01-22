@@ -48,20 +48,20 @@ body {
 ::-webkit-scrollbar {
     height: 5px; /* height of horizontal scrollbar ← You're missing this */
     width: 5px; /* width of vertical scrollbar */
-    border: 1px solid var(--body-bg);
+    border: 1px solid #666565;
 }
 
 /* Track */
-// ::-webkit-scrollbar-track {
-//     background: var(--border-color);
-// }
+::-webkit-scrollbar-track {
+    background: #666565;
+}
 
 /* Handle */
-// ::-webkit-scrollbar-thumb {
-//     background: var(--primary-color2);
-// }
+::-webkit-scrollbar-thumb {
+    background: linear-gradient(90deg, #5decf7 0%, #dc44e9 41.12%);
+}
 
 /* Handle on hover */
-// ::-webkit-scrollbar-thumb:hover {
-//     background: var(--primary-color2);
-// }
+::-webkit-scrollbar-thumb:hover {
+    background: linear-gradient(90deg, #5decf7 0%, #dc44e9 41.12%);
+}

@@ -133,7 +133,11 @@
       <div class="container-fluid">
         <div class="inner-page-banner__top">
           <h2 class="inner-page-title"><span>Who We Are</span></h2>
-          <p>We help businesses thrive in a digital-first world by securing their most valuable assets. With a strong foundation in cybersecurity expertise and a focus on strategic consulting, we combine innovation, cutting-edge technology, and human-centric approaches to deliver tangible value. From protecting your data to ensuring compliance and building trust, we empower you to reimagine your business with security at its core.</p>
+          <p>We help businesses thrive in a digital-first world by securing their most valuable assets. With a strong
+            foundation in cybersecurity expertise and a focus on strategic consulting, we combine innovation,
+            cutting-edge technology, and human-centric approaches to deliver tangible value. From protecting your data
+            to ensuring compliance and building trust, we empower you to reimagine your business with security at its
+            core.</p>
         </div>
         <div class="who-we-are__content">
           <img src="images/banner/who-we-are-banner.png" class="img-fluid" alt="" loading="lazy">
@@ -282,7 +286,7 @@
     <section class="awards-recognitions">
       <div class="container-fluid">
         <h3 class="section-title mb-5">Awards/Recognitions</h3>
-        <ul class="list-unstyled mb-0"> 
+        <ul class="list-unstyled mb-0">
           <li class="special">
             <div class="awards-recognitions__content">
               <h5>CIO Choice</h5>
@@ -330,57 +334,57 @@
     </section>
 
     <!-- history -->
-    <section class="history d-none">
+    <section class="history">
       <div class="container-fluid">
         <h3 class="section-title mb-5">History</h3>
-        <div class="history-container">
-          <div>
-            <ul class="list-unstyled mb-0 img-group">
-              <li class="img-container">
-                <h3>1</h3>
-                <p>Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum
-                  Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum</p>
-              </li>
-              <li class="img-container">
-                <h3>2</h3>
-                <p>Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum
-                  Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum</p>
-              </li>
-              <li class="img-container">
-                <h3>3</h3>
-                <p>Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum
-                  Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum</p>
-              </li>
-              <li class="img-container">
-                <h3>4</h3>
-                <p>Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum
-                  Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum</p>
-              </li>
-              <li class="img-container">
-                <h3>5</h3>
-                <p>Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum
-                  Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum</p>
-              </li>
-              <li class="img-container">
-                <h3>6</h3>
-                <p>Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum
-                  Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum</p>
-              </li>
-              <li class="img-container">
-                <h3>7</h3>
-                <p>Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum
-                  Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum</p>
-              </li>
-              <li class="img-container">
-                <h3>8</h3>
-                <p>Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum
-                  Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum</p>
-              </li>
-            </ul>
+      </div>
+      <div class="scroll-container">
+        <div class="content">
+          <div class="item">
+            <h3>1991</h3>
+            <p>Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum
+              Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum</p>
+          </div>
+          <div class="item">
+            <h3>1992</h3>
+            <p>Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum
+              Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum</p>
+          </div>
+          <div class="item">
+            <h3>1993</h3>
+            <p>Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum
+              Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum</p>
+          </div>
+          <div class="item">
+            <h3>1994</h3>
+            <p>Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum
+              Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum</p>
+          </div>
+          <div class="item">
+            <h3>1995</h3>
+            <p>Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum
+              Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum</p>
+          </div>
+          <div class="item">
+            <h3>1996</h3>
+            <p>Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum
+              Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum</p>
+          </div>
+          <div class="item">
+            <h3>1997</h3>
+            <p>Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum
+              Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum</p>
+          </div>
+          <div class="item">
+            <h3>1998</h3>
+            <p>Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum
+              Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum</p>
           </div>
         </div>
+        <div class="custom-scrollbar">
+          <div class="thumb"></div>
+        </div>
       </div>
-
     </section>
 
     <!-- locations -->
@@ -500,26 +504,8 @@
   <script src="js/jquery.min.js"></script>
   <script src="js/owl.carousel.min.js"></script>
   <script src="js/bootstrap.bundle.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/motion@latest/dist/motion.js"></script>
   <script src="js/custom.js"></script>
-  <script>
-    const { animate, scroll } = Motion;
-
-    const items = document.querySelectorAll(".img-container");
-
-    // Animate gallery horizontally during vertical scroll
-    scroll(
-      animate(".img-group", {
-        transform: ["none", `translateX(-${items.length - 1}000px)`],
-      }),
-      { target: document.querySelector(".history-container") }
-    )
-
-    // Progress bar representing gallery scroll
-    scroll(animate(".progress-img", { scaleX: [0, 1] }), {
-      target: document.querySelector(".history-container"),
-    })
-  </script>
+  
 </body>
 
 </html>

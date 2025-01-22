@@ -235,16 +235,12 @@ section {
     overflow: hidden;
     cursor: grab;
 
-    @include breakpoint(mobile-max) {
-        padding-left: 15px;
-        padding-right: 15px;
-    }
-
     .content {
         display: flex;
         overflow-x: auto;
         scrollbar-width: none;
         user-select: none;
+        padding: 0 15px;
 
         &::-webkit-scrollbar {
             display: none;
