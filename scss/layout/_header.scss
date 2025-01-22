@@ -7,7 +7,7 @@
     &__wrap {
         position: sticky;
         top: -60px;
-        z-index: 10;
+        z-index: 99;
         background-color: var(--body-bg);
 
         // background: rgba(var(--body-color), 0.6);
