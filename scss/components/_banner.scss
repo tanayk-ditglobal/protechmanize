@@ -1,6 +1,8 @@
 .banner {
     height: 90dvh;
     position: relative;
+    padding: 0;
+    margin: 0;
 
     @include breakpoint(ipad-max) {
         height: auto;
