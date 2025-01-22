@@ -63,6 +63,24 @@ jQuery(document).ready(function ($) {
     );
   });
 
+   // security-layers scroll buttons
+   $(".locations__action-scroll-left").click(function () {
+    $(".locations__content-wrap").animate(
+      {
+        scrollLeft: "-=175px",
+      },
+      "normal"
+    );
+  });
+  $(".locations__action-scroll-right").click(function () {
+    $(".locations__content-wrap").animate(
+      {
+        scrollLeft: "+=175px",
+      },
+      "normal"
+    );
+  });
+
   // $("#nav-toggle").click(function () {
   //   $('body').toggleClass("overflow-hidden");
   // });

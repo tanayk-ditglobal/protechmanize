@@ -267,6 +267,16 @@
                 }
             }
         }
+
+        .locations {
+            &__action {
+                .btn {
+                    img {
+                        filter: brightness(0);
+                    }
+                }
+            }
+        }
     }
 }
 

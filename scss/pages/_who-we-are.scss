@@ -488,5 +488,22 @@
                 }
             }
         }
+
+        &__action {
+            text-align: right;
+            display: none;
+
+            .btn {
+                padding: 10px;
+
+                img {
+                    width: 22px;
+                }
+            }
+
+            @include breakpoint(mobile-max) {
+                display: block;
+            }
+        }
     }
 }
