@@ -444,8 +444,8 @@
             color: var(--body-color);
 
             @include breakpoint(mobile-max) {
-                flex: 50%;
-                min-width: 50%;
+                flex: 60%;
+                min-width: 60%;
             }
 
             &-wrap {
