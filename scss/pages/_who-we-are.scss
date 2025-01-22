@@ -377,6 +377,10 @@
                 position: relative;
                 padding-top: 90px;
 
+                @include breakpoint(mobile-max) {
+                    min-width: 275px;
+                }
+
                 &::before {
                     content: "";
                     width: calc(100% + 40px);
