@@ -87,10 +87,6 @@ a {
             color: var(--body-color);
         }
 
-        &.active {
-            font-weight: 700;
-        }
-
         + .breadcrumb-item {
             &::before {
                 color: var(--body-color);
