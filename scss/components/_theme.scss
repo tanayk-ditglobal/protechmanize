@@ -37,6 +37,8 @@
     }
 
     .footer {
+        border-top-color: #21212142;
+
         .social-links {
             .navbar-nav {
                 .nav-link {
@@ -180,6 +182,16 @@
         }
     }
 
+    .industries-carousel {
+        .owl-nav {
+            button {
+                img {
+                    filter: brightness(0);
+                }
+            }
+        }
+    }
+
     .text-gradient {
         background: linear-gradient(90.05deg, #38d0dc -1.7%, #b21ebe 33.18%);
         color: transparent;
@@ -198,6 +210,28 @@
         .text-gradient {
             background: none;
             color: #1e73be;
+        }
+    }
+
+    .accordion {
+        &-button {
+            &::before {
+                filter: brightness(0);
+            }
+        }
+    }
+
+    .what-we-do {
+        .industries {
+            &__content {
+                &-box {
+                    &__top {
+                        img {
+                            filter: brightness(0) !important;
+                        }
+                    }
+                }
+            }
         }
     }
 }

@@ -1,0 +1,347 @@
+.what-we-do {
+    .empower-progress {
+        padding: 50px 0;
+        width: 70%;
+        margin: 0 auto;
+
+        @include breakpoint(ipad-max) {
+            width: 100%;
+        }
+
+        p {
+            @include font-size(18px);
+            margin-bottom: 50px;
+
+            @media screen and (min-width: 1441px) {
+                font-size: 21px;
+            }
+
+            @media screen and (min-width: 1681px) {
+                font-size: 26px;
+            }
+        }
+    }
+
+    .our-core-services {
+        margin-bottom: 0;
+
+        p {
+            @include font-size(21px);
+            margin-bottom: 50px;
+
+            @media screen and (min-width: 1441px) {
+                font-size: 25px;
+            }
+
+            @media screen and (min-width: 1681px) {
+                font-size: 30px;
+            }
+        }
+
+        .accordion {
+            ul {
+                li {
+                    @include font-size(18px);
+
+                    @media screen and (min-width: 1441px) {
+                        font-size: 21px;
+                    }
+
+                    @media screen and (min-width: 1681px) {
+                        font-size: 26px;
+                    }
+                }
+            }
+
+            .img-box {
+                text-align: right;
+
+                @include breakpoint(ipad-max) {
+                    text-align: center;
+                }
+
+                img {
+                    width: 260px;
+
+                    @include breakpoint(ipad-max) {
+                        width: 200px;
+                    }
+                }
+            }
+        }
+    }
+
+    .cyber-security-solutions {
+        margin-bottom: 0;
+
+        p {
+            @include font-size(17px);
+            margin-bottom: 50px;
+
+            @media screen and (min-width: 1441px) {
+                font-size: 20px;
+            }
+
+            @media screen and (min-width: 1681px) {
+                font-size: 24px;
+            }
+        }
+
+        &__content {
+            display: flex;
+            background-color: #F2F2F2;
+            border-radius: 10px;
+
+            .icon-box {
+                width: 195px;
+                height: 195px;
+                background: linear-gradient(108.34deg, #5decf7 -2.22%, #dc44e9 104.22%);
+                border-top-left-radius: 10px;
+                border-bottom-left-radius: 10px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+
+                @include breakpoint(ipad-max) {
+                    width: 180px;
+                    height: 180px;
+                }
+
+                @include breakpoint(mobile-max) {
+                    width: 120px;
+                    height: 160px;
+
+                    img {
+                        width: 80px;
+                    }
+                }
+            }
+
+            .content {
+                height: 100%;
+                flex: 1;
+                padding: 20px;
+                color: #212121;
+
+                h6 {
+                    @include font-size(22px);
+
+                    @media screen and (min-width: 1441px) {
+                        font-size: 28px;
+                    }
+
+                    @media screen and (min-width: 1681px) {
+                        font-size: 34px;
+                    }
+                }
+
+                p {
+                    margin-bottom: 0;
+                }
+            }
+        }
+    }
+
+    .industries {
+        &__content {
+            display: flex;
+            margin-top: 50px;
+
+            @include breakpoint(ipad-max) {
+                flex-wrap: wrap;
+            }
+
+            &-box {
+                flex: 1;
+                height: 100%;
+
+                @include breakpoint(ipad-max) {
+                    flex: 50%;
+                }
+
+                @include breakpoint(mobile-max) {
+                    flex: 100%;
+                }
+
+                &__top {
+                    padding: 100px 40px;
+                    border: 1px solid var(--body-color);
+
+                    @include breakpoint(desktop-max) {
+                        padding: 80px 40px;
+                        height: 300px;
+                    }
+
+                    @include breakpoint(mobile-max) {
+                        padding: 70px 30px;
+                        height: auto;
+                        width: 99%;
+                        margin: auto;
+                    }
+
+                    img {
+                        width: 50px;
+                        margin-bottom: 15px;
+                        filter: none !important;
+                    }
+
+                    p {
+                        @include font-size(17px);
+                        font-weight: 500;
+                        margin-bottom: 0px;
+
+                        @media screen and (min-width: 1441px) {
+                            font-size: 20px;
+                        }
+
+                        @media screen and (min-width: 1681px) {
+                            font-size: 24px;
+                        }
+                    }
+                }
+
+                &__img {
+                    img {
+                        height: 300px;
+                        width: 100%;
+                        display: block;
+                        object-fit: cover;
+                        filter: grayscale(1);
+                        transition: 0.3s;
+                    }
+                }
+
+                &:hover {
+                    img {
+                        filter: grayscale(0);
+                    }
+                }
+            }
+        }
+    }
+
+    .our-partners {
+        width: 90%;
+        margin-bottom: 0;
+
+        @include breakpoint(ipad-max) {
+            width: 100%;
+        }
+
+        &__list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 30px;
+            margin-top: 40px;
+
+            @include breakpoint(ipad-max) {
+                gap: 20px;
+            }
+
+            li {
+                flex: 22%;
+
+                @include breakpoint(ipad-max) {
+                    flex: 30%;
+                    max-width: 30%;
+                }
+
+                @include breakpoint(portrait-mobile-max) {
+                    flex: 46%;
+                    max-width: 46%;
+                }
+            }
+
+            &-content {
+                position: relative;
+                padding: 30px 0;
+
+                &:before {
+                    content: "";
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    width: 90%;
+                    height: 1px;
+                    background: linear-gradient(90.05deg, #5decf7 -1.7%, #dc44e9 33.18%);
+
+                    @include breakpoint(ipad-max) {
+                        width: 95%;
+                    }
+                }
+
+                h5 {
+                    @include font-size(21px);
+                    font-weight: 300;
+
+                    @media screen and (min-width: 1441px) {
+                        font-size: 25px;
+                    }
+
+                    @media screen and (min-width: 1681px) {
+                        font-size: 30px;
+                    }
+                }
+            }
+        }
+    }
+
+    .get-in-touch {
+        position: relative;
+        margin-bottom: 50px;
+
+        .float-img {
+            position: absolute;
+            top: 0;
+            right: 0;
+            pointer-events: none;
+
+            @include breakpoint(ipad-max) {
+                width: 50%;
+            }
+        }
+
+        &__content {
+            h5 {
+                @include font-size(17px);
+                font-weight: 800;
+                margin-bottom: 70px;
+
+                @media screen and (min-width: 1441px) {
+                    font-size: 20px;
+                }
+
+                @media screen and (min-width: 1681px) {
+                    font-size: 24px;
+                }
+            }
+
+            h3 {
+                @include font-size(50px);
+                font-weight: 300;
+                margin-bottom: 70px;
+
+                @media screen and (min-width: 1441px) {
+                    font-size: 65px;
+                }
+
+                @media screen and (min-width: 1681px) {
+                    font-size: 82px;
+                }
+            }
+
+            p {
+                @include font-size(17px);
+                margin-bottom: 50px;
+    
+                @media screen and (min-width: 1441px) {
+                    font-size: 20px;
+                }
+    
+                @media screen and (min-width: 1681px) {
+                    font-size: 24px;
+                }
+            }
+        }
+    }
+}

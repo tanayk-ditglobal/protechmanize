@@ -52,6 +52,7 @@
                     padding: 0;
                     color: var(--body-color);
                     display: inline-block;
+                    white-space: nowrap;
     
                     &::before {
                         content: '';

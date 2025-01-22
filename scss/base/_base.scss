@@ -8,7 +8,6 @@ html {
 
     // Mozila Firefox scroll width
     scrollbar-width: thin;
-    scroll-behavior: smooth;
 
     @media screen and (min-width: 1681px) {
         font-size: 18px;
@@ -30,7 +29,6 @@ body {
     font-family: $primary-font;
     font-weight: 300;
     position: relative;
-    // overflow-x: hidden;
     min-height: -webkit-fill-available;
     background-color: var(--body-bg);
     transition: 0.3s ease-in-out;

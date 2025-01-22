@@ -57,14 +57,88 @@
 
         .owl-dot {
             span {
-                background-color: #4A4A4A;
+                background-color: #4a4a4a;
             }
 
             &.active {
                 span {
-                    background-color: #FFFFFF;
+                    background-color: #ffffff;
                 }
             }
+        }
+    }
+}
+
+.industries-carousel {
+    width: 80%;
+
+    @include breakpoint(mobile-max) {
+        width: 100%;
+    }
+
+    .owl-nav {
+        position: absolute;
+        right: -150px;
+        top: 50%;
+        transform: translateY(-50%);
+        margin: 0;
+
+        @include breakpoint(desktop-max) {
+            right: -125px;
+        }
+
+        @include breakpoint(mobile-max) {
+            right: auto;
+            top: auto;
+            transform: none;
+            position: static;
+            margin-top: 20px;
+        }
+
+        button {
+            border: 1px solid var(--body-color) !important;
+            border-radius: 50% !important;
+            width: 40px;
+            height: 40px;
+            margin: 5px 10px !important;
+            display: inline-flex !important;
+            align-items: center;
+            justify-content: center;
+
+            img {
+                width: 21px;
+            }
+
+            @media screen and (min-width: 1441px) {
+                width: 50px;
+                height: 50px;
+
+                img {
+                    width: auto;
+                }
+            }
+
+            &:hover {
+                background-color: transparent !important;
+            }
+        }
+
+        .disabled {
+            cursor: not-allowed;
+        }
+    }
+
+    p {
+        margin-bottom: 0;
+        padding: 0 10px;
+        @include font-size(17px);
+
+        @media screen and (min-width: 1441px) {
+            font-size: 20px;
+        }
+
+        @media screen and (min-width: 1681px) {
+            font-size: 24px;
         }
     }
 }
