@@ -187,8 +187,8 @@
             font-weight: 500;
             gap: 40px;
 
-            @include breakpoint(ipad-max) {
-                gap: 30px;
+            @include breakpoint(desktop-max) {
+                gap: 25px;
             }
 
             .nav {
@@ -298,7 +298,7 @@
     .contact-us {
         position: relative;
         z-index: 1;
-        margin-left: 30px;
+        margin-left: 25px;
 
         @include breakpoint(large-desktop-min) {
             margin-left: 50px;

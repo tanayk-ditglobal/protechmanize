@@ -1,4 +1,12 @@
 .what-we-do {
+    @include breakpoint(ipad-max) {
+        padding-top: 73px;
+    }
+
+    @include breakpoint(mobile-max) {
+        padding-top: 45px;
+    }
+
     .empower-progress {
         padding: 50px 0;
         width: 70%;
