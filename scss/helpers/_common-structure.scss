@@ -1,157 +1,263 @@
 /* Chrome, Safari, Edge, Opera */
 input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button {
-  -webkit-appearance: none;
-  margin: 0;
+    -webkit-appearance: none;
+    margin: 0;
 }
 
 /* Firefox */
 input[type="number"] {
-  -moz-appearance: textfield;
+    -moz-appearance: textfield;
 }
 
 a {
-  color: $secondary-color;
-  text-decoration: none;
-  font-weight: 500;
-
-  .icon-link-arrow {
-    @include font-size(12px);
-    margin-left: 5px;
-    position: relative;
-    display: inline-block;
-    transition: 0.3s ease-in-out;
-  }
-
-  &:hover {
     color: $secondary-color;
+    text-decoration: none;
+    font-weight: 500;
 
     .icon-link-arrow {
-      transform: rotate(45deg);
+        @include font-size(12px);
+        margin-left: 5px;
+        position: relative;
+        display: inline-block;
+        transition: 0.3s ease-in-out;
     }
-  }
+
+    &:hover {
+        color: $secondary-color;
+
+        .icon-link-arrow {
+            transform: rotate(45deg);
+        }
+    }
 }
 
 .container-fluid {
-  @include breakpoint(large-desktop-min) {
-    padding: 0 100px;
-  }
+    @include breakpoint(large-desktop-min) {
+        padding: 0 100px;
+    }
 
-  @media screen and (min-width: 1681px) {
-    padding: 0 120px;
-  }
+    @media screen and (min-width: 1681px) {
+        padding: 0 120px;
+    }
 }
 
 .section-title {
-  @include font-size(42px);
-  text-transform: capitalize;
-  font-weight: 300;
-  margin-bottom: 20px;
+    @include font-size(42px);
+    text-transform: capitalize;
+    font-weight: 300;
+    margin-bottom: 20px;
 
-  span {
-    @extend .text-gradient;
-  }
-
-  @media screen and (min-width: 1441px) {
-    font-size: 50px;
-  }
-
-  @media screen and (min-width: 1681px) {
-    font-size: 60px;
-  }
-
-  br {
-    @include breakpoint(mobile-max) {
-      display: none;
+    span {
+        @extend .text-gradient;
     }
-  }
+
+    @media screen and (min-width: 1441px) {
+        font-size: 50px;
+    }
+
+    @media screen and (min-width: 1681px) {
+        font-size: 60px;
+    }
+
+    br {
+        @include breakpoint(mobile-max) {
+            display: none;
+        }
+    }
 }
 
 .breadcrumb {
-  padding: 20px 0;
-  margin-top: 10px;
-  margin-bottom: 30px;
-  border-top: 1px solid var(--body-color);
+    padding: 20px 0;
+    margin-top: 10px;
+    margin-bottom: 30px;
+    border-top: 1px solid var(--body-color);
 
-  @include breakpoint(ipad-max) {
-    border: none;
-  }
-
-  &-item {
-    color: var(--body-color);
-    font-weight: 500;
-
-    a,
-    &.active {
-      color: var(--body-color);
+    @include breakpoint(ipad-max) {
+        border: none;
     }
 
-    &.active {
-      font-weight: 700;
-    }
-
-    + .breadcrumb-item {
-      &::before {
+    &-item {
         color: var(--body-color);
-        @include font-size(18px);
-      }
+        font-weight: 500;
+
+        a,
+        &.active {
+            color: var(--body-color);
+        }
+
+        &.active {
+            font-weight: 700;
+        }
+
+        + .breadcrumb-item {
+            &::before {
+                color: var(--body-color);
+                @include font-size(18px);
+            }
+        }
     }
-  }
 }
 
 .inner-page-banner {
-  padding: 0;
+    padding: 0;
 
-  &__top {
-    margin-bottom: 70px;
+    &__top {
+        margin-bottom: 70px;
 
-    p {
-      @include font-size(18px);
-      font-weight: 500;
+        p {
+            @include font-size(18px);
+            font-weight: 500;
 
-      @media screen and (min-width: 1441px) {
-        font-size: 21px;
-      }
+            @media screen and (min-width: 1441px) {
+                font-size: 21px;
+            }
 
-      @media screen and (min-width: 1681px) {
-        font-size: 26px;
-      }
+            @media screen and (min-width: 1681px) {
+                font-size: 26px;
+            }
+        }
     }
-  }
 
-  img {
-    pointer-events: none;
-  }
+    img {
+        pointer-events: none;
+    }
 }
 
 .inner-page-title {
-  @include font-size(56px);
-  text-transform: capitalize;
-  font-weight: 300;
-  margin-bottom: 20px;
+    @include font-size(56px);
+    text-transform: capitalize;
+    font-weight: 300;
+    margin-bottom: 20px;
 
-  span {
-    @extend .text-gradient;
-  }
+    span {
+        @extend .text-gradient;
+    }
 
-  @media screen and (min-width: 1441px) {
-    font-size: 65px;
-  }
+    @media screen and (min-width: 1441px) {
+        font-size: 65px;
+    }
 
-  @media screen and (min-width: 1681px) {
-    font-size: 80px;
-  }
+    @media screen and (min-width: 1681px) {
+        font-size: 80px;
+    }
 }
 
 section {
-  padding: 110px 0;
-  margin-bottom: 100px;
+    padding: 110px 0;
+    margin-bottom: 100px;
 
-  @include breakpoint(ipad-max) {
-    padding: 115px 0 0 0;
-  }
+    @include breakpoint(ipad-max) {
+        padding: 115px 0 0 0;
+    }
 
-  @include breakpoint(mobile-max) {
-    margin-bottom: 0;
-  }
+    @include breakpoint(mobile-max) {
+        margin-bottom: 0;
+    }
+}
+
+.get-in-touch {
+    position: relative;
+    margin-bottom: 50px;
+
+    .float-img {
+        position: absolute;
+        top: 0;
+        right: 0;
+        pointer-events: none;
+
+        @include breakpoint(ipad-max) {
+            width: 50%;
+        }
+    }
+
+    &__content {
+        h5 {
+            @include font-size(17px);
+            font-weight: 800;
+            margin-bottom: 70px;
+
+            @media screen and (min-width: 1441px) {
+                font-size: 20px;
+            }
+
+            @media screen and (min-width: 1681px) {
+                font-size: 24px;
+            }
+        }
+
+        h3 {
+            @include font-size(50px);
+            font-weight: 300;
+            margin-bottom: 70px;
+
+            @media screen and (min-width: 1441px) {
+                font-size: 65px;
+            }
+
+            @media screen and (min-width: 1681px) {
+                font-size: 82px;
+            }
+        }
+
+        p {
+            @include font-size(17px);
+            margin-bottom: 50px;
+
+            @media screen and (min-width: 1441px) {
+                font-size: 20px;
+            }
+
+            @media screen and (min-width: 1681px) {
+                font-size: 24px;
+            }
+        }
+    }
+}
+
+.scroll-container {
+    position: relative;
+    width: 100%;
+    padding-bottom: 50px;
+    overflow: hidden;
+    cursor: grab;
+
+    .content {
+        display: flex;
+        overflow-x: auto;
+        scrollbar-width: none;
+        user-select: none;
+
+        &::-webkit-scrollbar {
+            display: none;
+        }
+
+        @include breakpoint(large-desktop-min) {
+            padding: 0 100px;
+        }
+    
+        @media screen and (min-width: 1681px) {
+            padding: 0 120px;
+        }
+    }
+
+    .custom-scrollbar {
+        position: absolute;
+        bottom: 0px;
+        /* Space between the content and scrollbar */
+        left: 50%;
+        transform: translateX(-50%);
+        width: calc(100% - 200px);
+        height: 5px;
+        background-color: #666565;
+        border-radius: 15px;
+    }
+
+    .thumb {
+        position: absolute;
+        height: 100%;
+        background: linear-gradient(90deg, #5decf7 0%, #dc44e9 41.12%);
+        border-radius: 15px;
+        cursor: grab;
+    }
 }
