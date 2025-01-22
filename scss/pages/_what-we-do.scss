@@ -117,7 +117,8 @@
 
                 @include breakpoint(mobile-max) {
                     width: 120px;
-                    height: 160px;
+                    height: auto;
+                    min-height: 160px;
 
                     img {
                         width: 80px;
