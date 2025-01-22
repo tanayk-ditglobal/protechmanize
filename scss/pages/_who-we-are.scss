@@ -1,4 +1,12 @@
 .who-we-are {
+    @include breakpoint(ipad-max) {
+        padding-top: 73px;
+    }
+
+    @include breakpoint(mobile-max) {
+        padding-top: 45px;
+    }
+
     &__content {
         position: relative;
 
@@ -11,6 +19,10 @@
             display: block;
             pointer-events: none;
             width: 65%;
+
+            @include breakpoint(ipad-max) {
+                width: 80%;
+            }
         }
 
         ul {
@@ -26,6 +38,10 @@
 
                 &:first-child {
                     margin-bottom: 70px;
+
+                    @include breakpoint(mobile-max) {
+                        margin-bottom: 40px;
+                    }
                 }
             }
         }
@@ -62,6 +78,10 @@
                     @media screen and (min-width: 1681px) {
                         font-size: 40px;
                     }
+
+                    @include breakpoint(portrait-mobile-max) {
+                        @include font-size(24px);
+                    }
                 }
             }
         }
@@ -70,7 +90,10 @@
     .inner-page-banner {
         p {
             font-weight: 300;
-            width: 80%;
+
+            @include breakpoint(ipad-min) {
+                width: 80%;
+            }
         }
     }
 
@@ -81,6 +104,10 @@
             position: sticky;
             top: 100px;
             margin-top: 70px;
+
+            @include breakpoint(mobile-max) {
+                position: static;
+            }
 
             h2 {
                 font-weight: 300;
@@ -102,10 +129,19 @@
             background: linear-gradient(180deg, rgba(17, 17, 17, 1) 30%, rgba(255, 255, 255, 0) 100%);
             position: sticky;
             top: 60px;
+
+            @include breakpoint(mobile-max) {
+                top: 54px;
+                height: 65px;
+            }
         }
 
         ul {
             width: 70%;
+
+            @include breakpoint(ipad-max) {
+                width: 100%;
+            }
 
             li {
                 border-top: 1px solid var(--body-color);
@@ -147,6 +183,10 @@
         .scroll-container {
             .content {
                 gap: 80px;
+
+                @include breakpoint(mobile-max) {
+                    gap: 40px;
+                }
             }
 
             .item {
@@ -154,23 +194,44 @@
                 height: 100%;
                 color: var(--body-color);
 
+                @include breakpoint(portrait-mobile-max) {
+                    min-width: 300px;
+                }
+
                 &-img {
                     object-fit: cover;
                     width: 100%;
                     height: 375px;
                     display: block;
-                    pointer-events: none
+                    pointer-events: none;
                 }
 
                 h5 {
                     @extend .text-gradient;
-                    font-size: 30px;
+                    @include font-size(21px);
                     font-weight: 500;
+                    padding-right: 10px;
+
+                    @media screen and (min-width: 1441px) {
+                        font-size: 25px;
+                    }
+    
+                    @media screen and (min-width: 1681px) {
+                        font-size: 30px;
+                    }
                 }
 
                 span {
-                    font-size: 24px;
+                    @include font-size(17px);
                     font-weight: 500;
+
+                    @media screen and (min-width: 1441px) {
+                        font-size: 20px;
+                    }
+        
+                    @media screen and (min-width: 1681px) {
+                        font-size: 24px;
+                    }
                 }
 
                 &-footer {
@@ -178,6 +239,16 @@
                     display: flex;
                     align-items: center;
                     justify-content: space-between;
+
+                    @include breakpoint(mobile-max) {
+                        padding: 20px 10px 0 10px;
+                    }
+
+                    img {
+                        @include breakpoint(mobile-max) {
+                            width: 30px;
+                        }
+                    }
                 }
             }
         }
@@ -189,12 +260,29 @@
             flex-wrap: wrap;
             gap: 80px;
 
+            @include breakpoint(ipad-max) {
+                gap: 50px;
+            }
+
+            @include breakpoint(mobile-max) {
+                gap: 30px;
+                justify-content: center;
+            }
+
             li {
                 width: 260px;
                 position: relative;
                 border: 1px solid var(--body-color);
                 background-color: var(--body-bg);
                 border-radius: 4px;
+
+                @include breakpoint(ipad-max) {
+                    width: 29%;
+                }
+
+                @include breakpoint(mobile-max) {
+                    width: 44%;
+                }
 
                 &::before {
                     content: "";
@@ -234,7 +322,7 @@
             }
 
             h3 {
-                @include font-size(55px);
+                @include font-size(50px);
                 line-height: 1;
                 font-weight: 400;
 
@@ -267,28 +355,55 @@
     }
 
     .locations {
+        @include breakpoint(mobile-max) {
+            margin-bottom: 60px;
+        }
+
         .scroll-container {
-            cursor: default;
+            @include breakpoint(mobile-max) {
+                padding-bottom: 30px;
+            }
+
+            @include breakpoint(ipad-min) {
+                cursor: default;
+            }
 
             .content {
                 gap: 40px;
+
+                @include breakpoint(mobile-max) {
+                    gap: 20px;
+                }
             }
 
             .item {
                 flex: 33%;
                 height: 100%;
                 color: var(--body-color);
-                cursor: default;
+
+                @include breakpoint(ipad-min) {
+                    cursor: default;
+                }
+
+                @include breakpoint(mobile-max) {
+                    flex: 50%;
+                    min-width: 50%;
+                }
 
                 &-img {
                     object-fit: cover;
                     width: 100%;
                     display: block;
-                    pointer-events: none
+                    pointer-events: none;
+                    min-height: 150px;
                 }
 
                 &-footer {
                     padding: 30px 0px 0px 0px;
+
+                    @include breakpoint(mobile-max) {
+                        padding: 20px 0 0 0;
+                    }
                 }
 
                 span {
@@ -298,7 +413,7 @@
                     @media screen and (min-width: 1441px) {
                         font-size: 26px;
                     }
-    
+
                     @media screen and (min-width: 1681px) {
                         font-size: 32px;
                     }

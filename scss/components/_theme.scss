@@ -234,6 +234,23 @@
             }
         }
     }
+
+    .who-we-are {
+        .at-a-glance {
+            &__shadow {
+                background: rgb(255, 255, 255);
+                background: linear-gradient(180deg, rgba(255, 255, 255, 1) 30%, rgba(255, 255, 255, 0) 100%);
+            }
+        }
+
+        .awards-recognitions {
+            li {
+                &.special {
+                    background-color: var(--body-bg);
+                }
+            }
+        }
+    }
 }
 
 // dark theme colors

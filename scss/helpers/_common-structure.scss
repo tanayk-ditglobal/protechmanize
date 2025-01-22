@@ -168,6 +168,7 @@ section {
 
         @include breakpoint(ipad-max) {
             width: 50%;
+            top: 10px;
         }
     }
 
@@ -184,6 +185,10 @@ section {
             @media screen and (min-width: 1681px) {
                 font-size: 24px;
             }
+
+            @include breakpoint(mobile-max) {
+                margin-bottom: 40px;
+            }
         }
 
         h3 {
@@ -198,6 +203,10 @@ section {
             @media screen and (min-width: 1681px) {
                 font-size: 82px;
             }
+
+            @include breakpoint(mobile-max) {
+                margin-bottom: 40px;
+            }
         }
 
         p {
@@ -211,6 +220,10 @@ section {
             @media screen and (min-width: 1681px) {
                 font-size: 24px;
             }
+
+            @include breakpoint(mobile-max) {
+                margin-bottom: 40px;
+            }
         }
     }
 }
@@ -221,6 +234,11 @@ section {
     padding-bottom: 50px;
     overflow: hidden;
     cursor: grab;
+
+    @include breakpoint(mobile-max) {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
 
     .content {
         display: flex;
@@ -235,7 +253,7 @@ section {
         @include breakpoint(large-desktop-min) {
             padding: 0 100px;
         }
-    
+
         @media screen and (min-width: 1681px) {
             padding: 0 120px;
         }
@@ -251,6 +269,10 @@ section {
         height: 5px;
         background-color: #666565;
         border-radius: 15px;
+
+        @include breakpoint(mobile-max) {
+            width: calc(100% - 30px);
+        }
     }
 
     .thumb {
