@@ -329,6 +329,11 @@
 
             &.active {
                 pointer-events: none;
+                color: $white !important;
+
+                &:hover {
+                    color: $white;
+                }
             }
         }
     }

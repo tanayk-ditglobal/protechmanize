@@ -278,6 +278,29 @@
             }
         }
     }
+
+    .contact-us {
+        .contact-form {
+            &__form {
+                .form-control,
+                .form-select {
+                    background-color: #ddd;
+                }
+
+                .form-check {
+                    &-input {
+                        filter: brightness(0);
+                    }
+                }
+
+                .btn-outline-light {
+                    img {
+                        filter: brightness(0);
+                    }
+                }
+            }
+        }
+    }
 }
 
 // dark theme colors
