@@ -271,7 +271,12 @@
         .awards-recognitions {
             li {
                 &.special {
-                    background-color: var(--body-bg);
+                    .awards-recognitions__content {
+                        &--front,
+                        &--back {
+                            background-color: $white;
+                        }
+                    }
                 }
             }
         }
