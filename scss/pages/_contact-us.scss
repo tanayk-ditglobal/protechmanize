@@ -108,6 +108,7 @@
 
                 .btn {
                     white-space: nowrap;
+                    text-transform: capitalize;
                 }
             }
         }
@@ -252,6 +253,10 @@
                 border-bottom: 1px solid transparent;
                 color: var(--body-color);
                 min-height: 50px;
+            }
+
+            .form-select {
+                text-transform: capitalize;
             }
 
             select option {

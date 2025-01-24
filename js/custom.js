@@ -343,3 +343,17 @@ if (document.getElementsByClassName("scroll-container").length) {
     initializeScrollContainer(container);
   });
 }
+
+if (document.getElementsByClassName("contact-us__accordion").length) {
+  // Get all links with the class 'select-link'
+  const links = document.querySelectorAll(".select-link");
+
+  // Add event listeners to each link
+  links.forEach((link) => {
+    link.addEventListener("click", (event) => {
+      const value = link.getAttribute("data-value"); // Get the value from the data-value attribute
+      const select = document.getElementById("mySelect");
+      select.value = value; // Set the select value
+    });
+  });
+}
