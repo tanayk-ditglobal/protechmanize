@@ -326,6 +326,10 @@
             @include breakpoint(ipad-max) {
                 font-size: 20px;
             }
+
+            &.active {
+                pointer-events: none;
+            }
         }
     }
 
@@ -348,7 +352,6 @@
         .form-control,
         .form-select {
             background-color: transparent;
-            color: $white;
             border: none;
             @include font-size(12px);
             color: var(--body-color);

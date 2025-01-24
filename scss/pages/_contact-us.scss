@@ -1,0 +1,272 @@
+.contact-us {
+    &__contacts {
+        &--content {
+            h5 {
+                border-image: linear-gradient(90.05deg, #5decf7 -1.7%, #dc44e9 33.18%) 1;
+                border-bottom-width: 1px;
+                border-bottom-style: solid;
+                display: inline-block;
+                padding-bottom: 10px;
+                margin-bottom: 28px;
+
+                @include breakpoint(mobile-max) {
+                    margin-bottom: 15px;
+                }
+            }
+
+            h6 {
+                @include font-size(17px);
+
+                @media screen and (min-width: 1441px) {
+                    font-size: 20px;
+                }
+
+                @media screen and (min-width: 1681px) {
+                    font-size: 24px;
+                }
+
+                a {
+                    color: var(--body-color);
+                }
+            }
+
+            p {
+                @include font-size(14px);
+
+                @media screen and (min-width: 1441px) {
+                    font-size: 16px;
+                }
+
+                @media screen and (min-width: 1681px) {
+                    font-size: 20px;
+                }
+            }
+        }
+    }
+
+    &__accordion {
+        @include breakpoint(ipad-max) {
+            margin-bottom: 100px;
+        }
+
+        .accordion {
+            &-button {
+                display: flex;
+                gap: 50px;
+
+                @include breakpoint(ipad-max) {
+                    gap: 30px;
+                }
+
+                @include breakpoint(mobile-max) {
+                    gap: 15px;
+                }
+            }
+
+            &-collapse {
+                p {
+                    @include font-size(17px);
+                    font-weight: 500;
+                    margin-bottom: 20px;
+
+                    @media screen and (min-width: 1441px) {
+                        font-size: 20px;
+                    }
+
+                    @media screen and (min-width: 1681px) {
+                        font-size: 24px;
+                    }
+                }
+
+                .link {
+                    color: var(--body-color);
+                    text-decoration: underline;
+                    @include font-size(17px);
+                    margin-bottom: 10px;
+                    display: inline-block;
+
+                    @media screen and (min-width: 1441px) {
+                        font-size: 20px;
+                    }
+
+                    @media screen and (min-width: 1681px) {
+                        font-size: 24px;
+                    }
+                }
+
+                span {
+                    display: block;
+                }
+            }
+
+            &-body {
+                padding-left: 110px;
+
+                @include breakpoint(ipad-max) {
+                    padding-left: 0;
+                }
+
+                .btn {
+                    white-space: nowrap;
+                }
+            }
+        }
+    }
+
+    .support {
+        background: linear-gradient(180deg, #0735fa -30.33%, #9473e4 109.02%);
+
+        @include breakpoint(ipad-max) {
+            padding: 100px 0;
+        }
+
+        @include breakpoint(mobile-max) {
+            padding: 70px 0;
+        }
+
+        &__content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+
+            h2 {
+                margin: 0;
+                @include font-size(40px);
+
+                @media screen and (min-width: 1441px) {
+                    font-size: 50px;
+                }
+
+                @media screen and (min-width: 1681px) {
+                    font-size: 60px;
+                }
+            }
+
+            .btn-outline-light {
+                display: inline-flex;
+                align-items: center;
+                gap: 15px;
+
+                img {
+                    position: relative;
+                    width: 21px;
+                    transition: 0.3s;
+                }
+
+                &:hover {
+                    img {
+                        transform: translateX(8px);
+                        filter: brightness(0%);
+                    }
+                }
+            }
+        }
+    }
+
+    .contact-form {
+        &__top {
+            width: 70%;
+
+            @include breakpoint(ipad-max) {
+                width: 100%;
+            }
+
+            h2 {
+                @include font-size(42px);
+
+                @media screen and (min-width: 1441px) {
+                    font-size: 50px;
+                }
+
+                @media screen and (min-width: 1681px) {
+                    font-size: 60px;
+                }
+            }
+
+            p {
+                @include font-size(27px);
+                text-transform: capitalize;
+
+                @media screen and (min-width: 1441px) {
+                    font-size: 31px;
+                }
+
+                @media screen and (min-width: 1681px) {
+                    font-size: 38px;
+                }
+            }
+        }
+
+        &__form {
+            width: 70%;
+
+            @include breakpoint(ipad-max) {
+                width: 100%;
+            }
+
+            .form-control,
+            .form-select {
+                background-color: #666666;
+                border: none;
+                border-bottom: 1px solid transparent;
+                color: var(--body-color);
+                min-height: 50px;
+            }
+
+            select option {
+                background: var(--body-bg);
+                color: var(--body-color);
+                text-shadow: 0 1px 0 var(--body-bg);
+            }
+
+            .form-check {
+                &-input {
+                    background-color: transparent;
+                    border-color: var(--body-color);
+                    outline: none;
+                    box-shadow: none;
+                    width: 20px;
+                    height: 20px;
+                }
+
+                &-label {
+                    margin-left: 30px;
+                    @include font-size(17px);
+
+                    @media screen and (min-width: 1441px) {
+                        font-size: 20px;
+                    }
+
+                    @media screen and (min-width: 1681px) {
+                        font-size: 24px;
+                    }
+
+                    a {
+                        color: var(--body-color);
+                        text-decoration: underline;
+                    }
+                }
+            }
+
+            .btn-outline-light {
+                display: inline-flex;
+                align-items: center;
+                gap: 15px;
+
+                img {
+                    position: relative;
+                    width: 21px;
+                    transition: 0.3s;
+                }
+
+                &:hover {
+                    img {
+                        transform: translateX(8px);
+                        filter: brightness(0%);
+                    }
+                }
+            }
+        }
+    }
+}
