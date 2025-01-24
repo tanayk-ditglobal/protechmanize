@@ -156,6 +156,29 @@
     }
 
     .industries {
+        &__top {
+            width: 70%;
+
+            @include breakpoint(mobile-max) {
+                width: 100%;
+                margin-bottom: 50px;
+            }
+
+            p {
+                margin-bottom: 0;
+                padding: 0 10px;
+                @include font-size(17px);
+        
+                @media screen and (min-width: 1441px) {
+                    font-size: 20px;
+                }
+        
+                @media screen and (min-width: 1681px) {
+                    font-size: 24px;
+                }
+            }
+        }
+
         &__content {
             display: flex;
             margin-top: 50px;
@@ -167,14 +190,6 @@
             &-box {
                 flex: 1;
                 height: 100%;
-
-                @include breakpoint(ipad-max) {
-                    flex: 50%;
-                }
-
-                @include breakpoint(mobile-max) {
-                    flex: 100%;
-                }
 
                 &__top {
                     padding: 100px 40px;

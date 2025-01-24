@@ -4,20 +4,20 @@
         border: none;
         color: var(--body-color);
         border-radius: 0 !important;
-
-        &:last-child {
-            border-bottom: 5px solid #5b5b5b;
-        }
+        margin-top: -5px;
     }
 
     &-button {
         background-color: transparent;
         color: var(--body-color);
+        padding: 16px 20px 21px 20px;
         @include font-size(29px);
         font-weight: 500;
         border-top: 5px solid #5b5b5b;
+        border-bottom: 5px solid #5b5b5b;
         border-radius: 0 !important;
         padding-right: 60px;
+        z-index: 1;
 
         &::before {
             content: "";
@@ -32,8 +32,8 @@
             background-repeat: no-repeat;
 
             @include breakpoint(mobile-max) {
-                width: 20px;
-                height: 20px;
+                width: 18px;
+                height: 18px;
             }
         }
 
@@ -43,6 +43,7 @@
 
         &:focus {
             border-top-color: #5b5b5b;
+            border-bottom-color: #5b5b5b;
         }
 
         @media screen and (min-width: 1441px) {
@@ -63,10 +64,20 @@
             border-image: linear-gradient(89.98deg, #0735fa -1.06%, #9473e4 100.84%) 1;
             border-top-width: 5px;
             border-top-style: solid;
+            border-bottom: none;
 
             &::before {
                 background-image: url("#{$images-path}/icons/minus.svg");
             }
+        }
+
+        &:hover {
+            background-color: transparent;
+            color: var(--body-color);
+            border-image: linear-gradient(89.98deg, #0735fa -1.06%, #9473e4 100.84%) 1;
+            border-top-width: 5px;
+            border-top-style: solid;
+            z-index: 2;
         }
     }
 
@@ -79,7 +90,7 @@
             height: 5px;
             width: 100%;
             left: 0;
-            bottom: -5px;
+            bottom: 0;
             background: linear-gradient(89.98deg, #0735fa -1.06%, #9473e4 100.84%);
             z-index: 10;
             transition: 0.3s;

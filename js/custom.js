@@ -20,11 +20,31 @@ jQuery(document).ready(function ($) {
   $(".industries-carousel").owlCarousel({
     nav: true,
     dots: false,
-    items: 1,
+    items: 4,
+    margin: 0,
+    loop: true,
+    autoplay: true,
+    autoplayTimeout: 3000,
+    autoplayHoverPause: true,
     navText: [
       "<img src='images/icons/long-arrow-left.svg' alt=''>",
       "<img src='images/icons/long-arrow-right.svg' alt=''>",
     ],
+    responsiveClass: true,
+    responsive: {
+      0: {
+        items: 1,
+      },
+      768: {
+        items: 2,
+      },
+      992: {
+        items: 3,
+      },
+      1200: {
+        items: 4,
+      }
+    }
   });
 
   // about-us scroll buttons
@@ -63,8 +83,8 @@ jQuery(document).ready(function ($) {
     );
   });
 
-   // security-layers scroll buttons
-   $(".locations__action-scroll-left").click(function () {
+  // security-layers scroll buttons
+  $(".locations__action-scroll-left").click(function () {
     $(".locations__content-wrap").animate(
       {
         scrollLeft: "-=175px",
@@ -80,10 +100,6 @@ jQuery(document).ready(function ($) {
       "normal"
     );
   });
-
-  // $("#nav-toggle").click(function () {
-  //   $('body').toggleClass("overflow-hidden");
-  // });
 
   // search button
   $("#search-btn").click(function () {
@@ -104,6 +120,23 @@ jQuery(document).ready(function ($) {
   $(".navbar-toggler").click(function () {
     $("body").toggleClass("overflow-hidden");
   });
+
+  if (document.getElementsByClassName("at-a-glance").length) {
+    $(function () {
+      var shadowTop = $('.at-a-glance__shadow');
+      var hieghtThreshold = $(".at-a-glance").offset().top - 200;
+      var hieghtThreshold_end = $(".at-a-glance").offset().top + $(".at-a-glance").height() - 200;
+      $(window).scroll(function () {
+        var scroll = $(window).scrollTop();
+
+        if (scroll >= hieghtThreshold && scroll <= hieghtThreshold_end) {
+          shadowTop.addClass('sticky');
+        } else {
+          shadowTop.removeClass('sticky');
+        }
+      });
+    })
+  }
 });
 
 // light and dark theme switch desktop

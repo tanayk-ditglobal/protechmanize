@@ -103,7 +103,7 @@
         &__title {
             position: sticky;
             top: 100px;
-            margin-top: 70px;
+            padding-top: 70px;
 
             @include breakpoint(mobile-max) {
                 position: static;
@@ -124,20 +124,41 @@
         }
 
         &__shadow {
-            height: 100px;
+            height: 200px;
             background: rgb(17, 17, 17);
-            background: linear-gradient(180deg, rgba(17, 17, 17, 1) 30%, rgba(255, 255, 255, 0) 100%);
-            position: sticky;
-            top: 60px;
+            position: fixed;
+            right: 0;
+            width: 50%;
+            opacity: 0;
+            visibility: hidden;
 
-            @include breakpoint(mobile-max) {
-                top: 54px;
-                height: 65px;
+            &.sticky {
+                opacity: 1;
+                visibility: visible;
+            }
+
+            &--top {
+                background: linear-gradient(180deg, rgba(17, 17, 17, 1) 30%, rgba(255, 255, 255, 0) 100%);
+                top: 60px;
+
+                @include breakpoint(mobile-max) {
+                    top: 54px;
+                }
+            }
+
+            &--bottom {
+                background: linear-gradient(360deg, rgba(17, 17, 17, 1) 30%, rgba(255, 255, 255, 0) 100%);
+                bottom: 0px;
+
+                @include breakpoint(mobile-max) {
+                    bottom: 54px;
+                }
             }
         }
 
         ul {
             width: 70%;
+            padding-top: 70px;
 
             @include breakpoint(ipad-max) {
                 width: 100%;
@@ -279,10 +300,8 @@
 
             li {
                 width: 260px;
-                position: relative;
-                border: 1px solid var(--body-color);
-                background-color: var(--body-bg);
-                border-radius: 4px;
+                height: 230px;
+                perspective: 1000px;
 
                 @include breakpoint(ipad-max) {
                     width: 29%;
@@ -305,13 +324,53 @@
                 }
 
                 &.special {
-                    background-color: #212121;
+                    .awards-recognitions__content {
+                        &--front,
+                        &--back {
+                            background-color: #212121;
+                        }
+                    }
+                }
+
+                &:hover {
+                    .awards-recognitions__content {
+                        transform: rotateY(180deg);
+                    }
                 }
             }
         }
 
         &__content {
-            padding: 80px 14px 14px;
+            transition: transform 0.5s;
+            transform-style: preserve-3d;
+            position: relative;
+            width: 100%;
+            height: 100%;
+
+            &--front {
+                position: absolute;
+                width: 100%;
+                height: 100%;
+                backface-visibility: hidden;
+                padding: 80px 14px 14px;
+                background-color: var(--body-bg);
+                border-radius: 4px;
+                border: 1px solid var(--body-color);
+            }
+
+            &--back {
+                position: absolute;
+                width: 100%;
+                height: 100%;
+                backface-visibility: hidden;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                background-color: var(--body-bg);
+                border-radius: 4px;
+                border: 1px solid var(--body-color);
+                transform: rotateY(180deg);
+            }
 
             h5 {
                 @include font-size(21px);
@@ -358,6 +417,10 @@
                 @media screen and (min-width: 1681px) {
                     font-size: 20px;
                 }
+            }
+
+            img {
+                width: 75%;
             }
         }
     }

@@ -70,29 +70,30 @@
 }
 
 .industries-carousel {
-    width: 80%;
-
-    @include breakpoint(mobile-max) {
-        width: 100%;
-    }
-
     .owl-nav {
         position: absolute;
-        right: -150px;
-        top: 50%;
-        transform: translateY(-50%);
+        right: 15px;
+        top: -100px;
         margin: 0;
 
-        @include breakpoint(desktop-max) {
-            right: -125px;
+        @media screen and (min-width: 1681px) {
+            right: 120px;
+        }
+
+        @include breakpoint(large-desktop-min) {
+            right: 100px;
+            top: -120px;
+        }
+
+        @include breakpoint(ipad-max) {
+            top: -100px;
         }
 
         @include breakpoint(mobile-max) {
+            top: -80px;
             right: auto;
-            top: auto;
-            transform: none;
-            position: static;
-            margin-top: 20px;
+            left: 50%;
+            transform: translateX(-50%);
         }
 
         button {
@@ -125,20 +126,6 @@
 
         .disabled {
             cursor: not-allowed;
-        }
-    }
-
-    p {
-        margin-bottom: 0;
-        padding: 0 10px;
-        @include font-size(17px);
-
-        @media screen and (min-width: 1441px) {
-            font-size: 20px;
-        }
-
-        @media screen and (min-width: 1681px) {
-            font-size: 24px;
         }
     }
 }
