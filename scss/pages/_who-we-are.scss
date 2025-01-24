@@ -132,6 +132,10 @@
             opacity: 0;
             visibility: hidden;
 
+            @include breakpoint(mobile-max) {
+                display: none;
+            }
+
             &.sticky {
                 opacity: 1;
                 visibility: visible;
@@ -140,19 +144,11 @@
             &--top {
                 background: linear-gradient(180deg, rgba(17, 17, 17, 1) 30%, rgba(255, 255, 255, 0) 100%);
                 top: 60px;
-
-                @include breakpoint(mobile-max) {
-                    top: 54px;
-                }
             }
 
             &--bottom {
                 background: linear-gradient(360deg, rgba(17, 17, 17, 1) 30%, rgba(255, 255, 255, 0) 100%);
                 bottom: 0px;
-
-                @include breakpoint(mobile-max) {
-                    bottom: 54px;
-                }
             }
         }
 
