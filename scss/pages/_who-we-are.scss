@@ -79,8 +79,13 @@
                         font-size: 40px;
                     }
 
+                    @include breakpoint(mobile-max) {
+                        @include font-size(22px);
+                        min-height: auto;
+                    }
+
                     @include breakpoint(portrait-mobile-max) {
-                        @include font-size(24px);
+                        @include font-size(18px);
                     }
                 }
             }
@@ -430,67 +435,126 @@
                     gap: 20px;
                 }
             }
+        }
 
-            .item {
-                min-width: 380px;
-                position: relative;
-                padding-top: 90px;
+        &-title {
+            position: sticky;
+            top: 85px;
+        }
 
-                @include breakpoint(mobile-max) {
-                    min-width: 275px;
-                }
+        .pinned-scroll {
+            &::after {
+                content: '';
+                width: 100%;
+                height: 20px;
+                background-color: var(--body-bg);
+                position: absolute;
+                top: 100%;
+                left: 0;
+            }
 
-                &::before {
-                    content: "";
-                    width: calc(100% + 40px);
-                    height: 1px;
-                    background-color: var(--body-color);
-                    position: absolute;
-                    top: 7px;
-                    left: 0;
-                }
+            .horizontal-scroll {
+                padding: 110px 0;
+                background-color: var(--body-bg);
+            }
+        }
 
-                &::after {
-                    content: "";
-                    width: 15px;
-                    height: 15px;
-                    background: linear-gradient(88.3deg, #5decf7 -0.63%, #dc44e9 88.46%);
-                    border-radius: 50%;
-                    position: absolute;
-                    top: 0;
-                    left: 0;
+        .item {
+            min-width: 380px;
+            position: relative;
+            padding-top: 90px;
+            margin-right: 40px;
+
+            &:first-child {
+                margin-left: 15px;
+            }
+
+            &:last-child {
+                margin-right: 15px;
+            }
+
+            &:not(:last-child) {
+                margin-right: 40px;
+            }
+
+            @include breakpoint(large-desktop-min) {
+                &:first-child {
+                    margin-left: 100px;
                 }
 
                 &:last-child {
-                    &::before {
-                        width: 100%;
-                    }
+                    margin-right: 100px;
+                }
+            }
+
+            @media screen and (min-width: 1681px) {
+                &:first-child {
+                    margin-left: 120px;
                 }
 
-                h3 {
-                    @include font-size(55px);
-                    @extend .text-gradient;
-                    font-weight: 100;
+                &:last-child {
+                    margin-right: 120px;
+                }
+            }
 
-                    @media screen and (min-width: 1441px) {
-                        font-size: 66px;
-                    }
+            @include breakpoint(mobile-max) {
+                min-width: 275px;
 
-                    @media screen and (min-width: 1681px) {
-                        font-size: 80px;
-                    }
+                &:not(:last-child) {
+                    margin-right: 20px;
+                }
+            }
+
+            &::before {
+                content: "";
+                width: calc(100% + 40px);
+                height: 1px;
+                background-color: var(--body-color);
+                position: absolute;
+                top: 7px;
+                left: 0;
+            }
+
+            &::after {
+                content: "";
+                width: 15px;
+                height: 15px;
+                background: linear-gradient(88.3deg, #5decf7 -0.63%, #dc44e9 88.46%);
+                border-radius: 50%;
+                position: absolute;
+                top: 0;
+                left: 0;
+            }
+
+            &:last-child {
+                &::before {
+                    width: 100%;
+                }
+            }
+
+            h3 {
+                @include font-size(55px);
+                @extend .text-gradient;
+                font-weight: 100;
+
+                @media screen and (min-width: 1441px) {
+                    font-size: 66px;
                 }
 
-                p {
-                    @include font-size(14px);
+                @media screen and (min-width: 1681px) {
+                    font-size: 80px;
+                }
+            }
 
-                    @media screen and (min-width: 1441px) {
-                        font-size: 16px;
-                    }
+            p {
+                @include font-size(14px);
 
-                    @media screen and (min-width: 1681px) {
-                        font-size: 20px;
-                    }
+                @media screen and (min-width: 1441px) {
+                    font-size: 16px;
+                }
+
+                @media screen and (min-width: 1681px) {
+                    font-size: 20px;
                 }
             }
         }

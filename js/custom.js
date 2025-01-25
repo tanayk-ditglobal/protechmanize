@@ -1,5 +1,5 @@
 jQuery(document).ready(function ($) {
-  // owl carosuel
+  // we-work-carousel
   $(".we-work-carousel").owlCarousel({
     loop: true,
     dots: true,
@@ -17,6 +17,7 @@ jQuery(document).ready(function ($) {
     },
   });
 
+  // industries-carousel
   $(".industries-carousel").owlCarousel({
     nav: true,
     dots: false,
@@ -83,7 +84,7 @@ jQuery(document).ready(function ($) {
     );
   });
 
-  // security-layers scroll buttons
+  // location scroll buttons
   $(".locations__action-scroll-left").click(function () {
     $(".locations__content-wrap").animate(
       {
@@ -121,6 +122,7 @@ jQuery(document).ready(function ($) {
     $("body").toggleClass("overflow-hidden");
   });
 
+  // at a glance shadow for sticky effect
   if (document.getElementsByClassName("at-a-glance").length) {
     $(function () {
       var shadowTop = $('.at-a-glance__shadow');
@@ -342,8 +344,9 @@ jQuery(document).ready(function ($) {
     document.querySelectorAll(".drag-scroll-container").forEach((container) => {
       initializeScrollContainer(container);
     });
-  }
+  } 
 
+  // select link pass value to select
   if (document.getElementsByClassName("contact-us__accordion").length) {
     // Get all links with the class 'select-link'
     const links = document.querySelectorAll(".select-link");
@@ -356,5 +359,59 @@ jQuery(document).ready(function ($) {
         select.value = value; // Set the select value
       });
     });
+  }
+
+  // pinned-scroll
+  if (document.getElementsByClassName("pinned-scroll").length) {
+    const pinnedSection = document.getElementById("pinned-section");
+    const scrollContainer = document.getElementById("scroll-container");
+    const scrollItems = scrollContainer.children;
+
+    // Calculate total width based on item widths and margins
+    function calculateTotalWidth() {
+      let totalWidth = 0;
+      Array.from(scrollItems).forEach((item) => {
+        const itemWidth = item.offsetWidth;
+        const marginRight =
+          parseInt(getComputedStyle(item).marginRight, 10) || 0;
+        const marginLeft =
+          parseInt(getComputedStyle(item).marginLeft, 10) || 0;
+        totalWidth += itemWidth + marginRight + marginLeft;
+      });
+      return totalWidth;
+    }
+
+    // Set the width of the scroll container and adjust the pinned section height
+    function setContainerWidth() {
+      const totalWidth = calculateTotalWidth();
+      scrollContainer.style.width = `${totalWidth}px`;
+
+      const horizontalScrollHeight = totalWidth - window.innerWidth; // Total scrollable width
+      const pinnedSectionHeight = 500 + horizontalScrollHeight; // Add vertical scroll space
+      pinnedSection.style.height = `${pinnedSectionHeight}px`;
+    }
+
+    // Handle scroll-based horizontal translation
+    function handleScroll() {
+      const rect = pinnedSection.getBoundingClientRect();
+      const offset = -rect.top; // How far the top of the pinned section is from the viewport
+      const totalWidth = calculateTotalWidth();
+      const maxVerticalScroll = totalWidth - window.innerWidth;
+
+      if (offset >= 0 && offset <= maxVerticalScroll) {
+        scrollContainer.style.transform = `translateX(-${offset}px)`;
+      } else if (offset < 0) {
+        scrollContainer.style.transform = `translateX(0)`; // Reset to the initial position
+      } else if (offset > maxVerticalScroll) {
+        scrollContainer.style.transform = `translateX(-${maxVerticalScroll}px)`; // Lock to the end
+      }
+    }
+
+    // Initial setup
+    setContainerWidth();
+    window.addEventListener("scroll", handleScroll);
+
+    // Resize handler to adjust container width dynamically
+    window.addEventListener("resize", setContainerWidth);
   }
 });

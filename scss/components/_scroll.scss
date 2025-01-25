@@ -1,0 +1,76 @@
+.drag-scroll-container {
+    position: relative;
+    width: 100%;
+    padding-bottom: 50px;
+    overflow: hidden;
+    cursor: grab;
+
+    .content {
+        display: flex;
+        overflow-x: auto;
+        scrollbar-width: none;
+        user-select: none;
+        padding: 0 15px;
+        -ms-overflow-style: none; /* IE and Edge */
+        scrollbar-width: none; /* Firefox */
+
+        &::-webkit-scrollbar {
+            display: none;
+        }
+
+        @include breakpoint(large-desktop-min) {
+            padding: 0 100px;
+        }
+
+        @media screen and (min-width: 1681px) {
+            padding: 0 120px;
+        }
+    }
+
+    .custom-scrollbar {
+        position: absolute;
+        bottom: 0px;
+        /* Space between the content and scrollbar */
+        left: 50%;
+        transform: translateX(-50%);
+        width: calc(100% - 200px);
+        height: 5px;
+        background-color: #666565;
+        border-radius: 15px;
+
+        @include breakpoint(mobile-max) {
+            width: calc(100% - 30px);
+        }
+    }
+
+    .thumb {
+        position: absolute;
+        height: 100%;
+        background: linear-gradient(90deg, #5decf7 0%, #dc44e9 41.12%);
+        border-radius: 15px;
+        cursor: grab;
+    }
+}
+
+.pinned-scroll {
+    height: 500px;
+    position: relative;
+
+    .horizontal-scroll {
+        position: sticky;
+        top: 160px;
+        z-index: 1;
+        overflow: hidden;
+
+        @media screen and (min-width: 1681px) {
+            top: 180px;
+        }
+
+        .content {
+            display: flex;
+            height: 100%;
+            transform: translateX(0);
+            transition: transform 0.2s ease-out;
+        }
+    }
+}
