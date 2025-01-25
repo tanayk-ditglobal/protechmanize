@@ -78,7 +78,6 @@ jQuery(document).ready(function ($) {
     );
   }
 
-
   // about-us scroll buttons
   $(".about-us-scroll-left").click(function () {
     $(".about-us__left").animate(
@@ -170,7 +169,6 @@ jQuery(document).ready(function ($) {
       });
     })
   }
-
 
   // light and dark theme switch desktop
   const toggleSwitch = document.querySelector(
