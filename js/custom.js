@@ -152,24 +152,6 @@ jQuery(document).ready(function ($) {
     $("body").toggleClass("overflow-hidden");
   });
 
-  // at a glance shadow for sticky effect
-  if (document.getElementsByClassName("at-a-glance").length) {
-    $(function () {
-      var shadowTop = $('.at-a-glance__shadow');
-      var hieghtThreshold = $(".at-a-glance").offset().top - 200;
-      var hieghtThreshold_end = $(".at-a-glance").offset().top + $(".at-a-glance").height() - 200;
-      $(window).scroll(function () {
-        var scroll = $(window).scrollTop();
-
-        if (scroll >= hieghtThreshold && scroll <= hieghtThreshold_end) {
-          shadowTop.addClass('sticky');
-        } else {
-          shadowTop.removeClass('sticky');
-        }
-      });
-    })
-  }
-
   // light and dark theme switch desktop
   const toggleSwitch = document.querySelector(
     '.theme-switch input[type="checkbox"]'
@@ -215,6 +197,96 @@ jQuery(document).ready(function ($) {
     }
   }
   toggleSwitch2.addEventListener("change", switchTheme, false);
+
+  // select link pass value to select
+  if (document.getElementsByClassName("contact-us__accordion").length) {
+    // Get all links with the class 'select-link'
+    const links = document.querySelectorAll(".select-link");
+
+    // Add event listeners to each link
+    links.forEach((link) => {
+      link.addEventListener("click", (event) => {
+        const value = link.getAttribute("data-value"); // Get the value from the data-value attribute
+        const select = document.getElementById("mySelect");
+        select.value = value; // Set the select value
+      });
+    });
+  }
+
+  // pinned-scroll
+  if (document.getElementsByClassName("pinned-scroll").length) {
+    const pinnedSection = document.getElementById("pinned-section");
+    const scrollContainer = document.getElementById("scroll-container");
+    const scrollItems = scrollContainer.children;
+
+    // Calculate total width based on item widths and margins
+    function calculateTotalWidth() {
+      let totalWidth = 0;
+      Array.from(scrollItems).forEach((item) => {
+        const itemWidth = item.offsetWidth;
+        const marginRight =
+          parseInt(getComputedStyle(item).marginRight, 10) || 0;
+        const marginLeft =
+          parseInt(getComputedStyle(item).marginLeft, 10) || 0;
+        totalWidth += itemWidth + marginRight + marginLeft;
+      });
+      return totalWidth;
+    }
+
+    // Set the width of the scroll container and adjust the pinned section height
+    function setContainerWidth() {
+      const totalWidth = calculateTotalWidth();
+      scrollContainer.style.width = `${totalWidth}px`;
+
+      const horizontalScrollHeight = totalWidth - window.innerWidth; // Total scrollable width
+      const pinnedSectionHeight = 500 + horizontalScrollHeight; // Add vertical scroll space
+      pinnedSection.style.height = `${pinnedSectionHeight}px`;
+    }
+
+    // Handle scroll-based horizontal translation
+    function handleScroll() {
+      const rect = pinnedSection.getBoundingClientRect();
+      const offset = -rect.top; // How far the top of the pinned section is from the viewport
+      const totalWidth = calculateTotalWidth();
+      const maxVerticalScroll = totalWidth - window.innerWidth;
+
+      if (offset >= 0 && offset <= maxVerticalScroll) {
+        scrollContainer.style.transform = `translateX(-${offset}px)`;
+      } else if (offset < 0) {
+        scrollContainer.style.transform = `translateX(0)`; // Reset to the initial position
+      } else if (offset > maxVerticalScroll) {
+        scrollContainer.style.transform = `translateX(-${maxVerticalScroll}px)`; // Lock to the end
+      }
+    }
+
+    // Initial setup
+    setContainerWidth();
+    window.addEventListener("scroll", handleScroll);
+
+    // Resize handler to adjust container width dynamically
+    window.addEventListener("resize", setContainerWidth);
+  }
+});
+
+$(window).on("load", function(){
+  // executes when complete page is fully loaded, including all frames, objects and images
+  // at a glance shadow for sticky effect
+  if (document.getElementsByClassName("at-a-glance").length) {
+    $(function () {
+      var shadowTop = $('.at-a-glance__shadow');
+      var hieghtThreshold = $(".at-a-glance").offset().top - 200;
+      var hieghtThreshold_end = $(".at-a-glance").offset().top + $(".at-a-glance").height() - 200;
+      $(window).scroll(function () {
+        var scroll = $(window).scrollTop();
+
+        if (scroll >= hieghtThreshold && scroll <= hieghtThreshold_end) {
+          shadowTop.addClass('sticky');
+        } else {
+          shadowTop.removeClass('sticky');
+        }
+      });
+    })
+  }
 
   // drag scroll carousel
 
@@ -373,74 +445,5 @@ jQuery(document).ready(function ($) {
     document.querySelectorAll(".drag-scroll-container").forEach((container) => {
       initializeScrollContainer(container);
     });
-  }
-
-  // select link pass value to select
-  if (document.getElementsByClassName("contact-us__accordion").length) {
-    // Get all links with the class 'select-link'
-    const links = document.querySelectorAll(".select-link");
-
-    // Add event listeners to each link
-    links.forEach((link) => {
-      link.addEventListener("click", (event) => {
-        const value = link.getAttribute("data-value"); // Get the value from the data-value attribute
-        const select = document.getElementById("mySelect");
-        select.value = value; // Set the select value
-      });
-    });
-  }
-
-  // pinned-scroll
-  if (document.getElementsByClassName("pinned-scroll").length) {
-    const pinnedSection = document.getElementById("pinned-section");
-    const scrollContainer = document.getElementById("scroll-container");
-    const scrollItems = scrollContainer.children;
-
-    // Calculate total width based on item widths and margins
-    function calculateTotalWidth() {
-      let totalWidth = 0;
-      Array.from(scrollItems).forEach((item) => {
-        const itemWidth = item.offsetWidth;
-        const marginRight =
-          parseInt(getComputedStyle(item).marginRight, 10) || 0;
-        const marginLeft =
-          parseInt(getComputedStyle(item).marginLeft, 10) || 0;
-        totalWidth += itemWidth + marginRight + marginLeft;
-      });
-      return totalWidth;
-    }
-
-    // Set the width of the scroll container and adjust the pinned section height
-    function setContainerWidth() {
-      const totalWidth = calculateTotalWidth();
-      scrollContainer.style.width = `${totalWidth}px`;
-
-      const horizontalScrollHeight = totalWidth - window.innerWidth; // Total scrollable width
-      const pinnedSectionHeight = 500 + horizontalScrollHeight; // Add vertical scroll space
-      pinnedSection.style.height = `${pinnedSectionHeight}px`;
-    }
-
-    // Handle scroll-based horizontal translation
-    function handleScroll() {
-      const rect = pinnedSection.getBoundingClientRect();
-      const offset = -rect.top; // How far the top of the pinned section is from the viewport
-      const totalWidth = calculateTotalWidth();
-      const maxVerticalScroll = totalWidth - window.innerWidth;
-
-      if (offset >= 0 && offset <= maxVerticalScroll) {
-        scrollContainer.style.transform = `translateX(-${offset}px)`;
-      } else if (offset < 0) {
-        scrollContainer.style.transform = `translateX(0)`; // Reset to the initial position
-      } else if (offset > maxVerticalScroll) {
-        scrollContainer.style.transform = `translateX(-${maxVerticalScroll}px)`; // Lock to the end
-      }
-    }
-
-    // Initial setup
-    setContainerWidth();
-    window.addEventListener("scroll", handleScroll);
-
-    // Resize handler to adjust container width dynamically
-    window.addEventListener("resize", setContainerWidth);
   }
 });
