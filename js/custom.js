@@ -18,20 +18,21 @@ jQuery(document).ready(function ($) {
   });
 
   // industries-carousel
-  $(".industries-carousel").owlCarousel({
+  var $owl = $(".industries-carousel");
+  var $progressBar = $(".industries__progress-bar");
+
+  // Initialize Owl Carousel
+  $owl.owlCarousel({
+    loop: true,
     nav: true,
     dots: false,
-    items: 4,
-    margin: 0,
-    loop: true,
     autoplay: true,
     autoplayTimeout: 3000,
-    autoplayHoverPause: true,
+    responsiveClass: true,
     navText: [
       "<img src='images/icons/long-arrow-left.svg' alt=''>",
       "<img src='images/icons/long-arrow-right.svg' alt=''>",
     ],
-    responsiveClass: true,
     responsive: {
       0: {
         items: 1,
@@ -45,8 +46,38 @@ jQuery(document).ready(function ($) {
       1200: {
         items: 4,
       }
-    }
+    },
+    onInitialized: updateProgress,
+    onTranslated: updateProgress,
   });
+
+  // Update the progress bar
+  function updateProgress(event) {
+    // Ensure event and event.item are defined
+    if (!event || !event.item) {
+      console.error("Event or event.item is undefined:", event);
+      return;
+    }
+
+    var totalItems = event.item.count; // Total number of items
+    var currentIndex =
+      (event.item.index - event.relatedTarget._clones.length / 2) %
+      totalItems;
+
+    // Adjust for negative index when looping
+    if (currentIndex < 0) {
+      currentIndex += totalItems;
+    }
+
+    // Calculate progress
+    var progress = ((currentIndex + 1) / totalItems) * 100;
+    $progressBar.css("width", progress + "%");
+
+    console.log(
+      `Current Index: ${currentIndex}, Total Items: ${totalItems}, Progress: ${progress}%`
+    );
+  }
+
 
   // about-us scroll buttons
   $(".about-us-scroll-left").click(function () {
@@ -344,7 +375,7 @@ jQuery(document).ready(function ($) {
     document.querySelectorAll(".drag-scroll-container").forEach((container) => {
       initializeScrollContainer(container);
     });
-  } 
+  }
 
   // select link pass value to select
   if (document.getElementsByClassName("contact-us__accordion").length) {
