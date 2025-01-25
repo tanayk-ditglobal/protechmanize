@@ -310,6 +310,7 @@
 
                 @include breakpoint(mobile-max) {
                     width: 44%;
+                    height: 200px;
                 }
 
                 &::before {
@@ -440,6 +441,10 @@
         &-title {
             position: sticky;
             top: 85px;
+
+            @include breakpoint(mobile-max) {
+                top: 110px;
+            }
         }
 
         .pinned-scroll {
