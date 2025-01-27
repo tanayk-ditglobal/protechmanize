@@ -91,6 +91,7 @@ $(document).ready(function ($) {
     slideTransition: "linear",
     autoplayTimeout: 3000,
     autoplaySpeed: 3000,
+    smartSpeed: 1000,
     autoplayHoverPause: false,
     responsive: {
       0: {
