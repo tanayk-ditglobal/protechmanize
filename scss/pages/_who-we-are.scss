@@ -304,6 +304,10 @@
                 height: 230px;
                 perspective: 1000px;
 
+                @media screen and (min-width: 1681px) {
+                    height: 260px;
+                }
+
                 @include breakpoint(ipad-max) {
                     width: 29%;
                 }

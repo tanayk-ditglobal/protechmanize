@@ -35,7 +35,7 @@
             }
 
             &.owl-next {
-                right: -70px;
+                right: -60px;
 
                 @include breakpoint(desktop-max) {
                     right: -50px;
@@ -259,6 +259,10 @@
 
             img {
                 width: 45px;
+
+                @include breakpoint(mobile-max) {
+                    width: 22px;
+                }
             }
         }
     }
