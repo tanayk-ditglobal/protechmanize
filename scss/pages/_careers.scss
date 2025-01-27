@@ -21,15 +21,34 @@
             li {
                 flex: 45%;
                 width: 45%;
-                height: 450px;
             }
         }
 
         .card {
             height: 100%;
 
+            &-body {
+                padding: 30px;
+            }
+
+            img {
+                margin-bottom: 20px;
+            }
+
+            h4 {
+                @include font-size(24px);
+
+                @media screen and (min-width: 1441px) {
+                    font-size: 28px;
+                }
+
+                @media screen and (min-width: 1681px) {
+                    font-size: 34px;
+                }
+            }
+
             p {
-                font-size: 21px;
+                @include font-size(18px);
                 margin-bottom: 0px;
 
                 @media screen and (min-width: 1441px) {
@@ -38,6 +57,39 @@
 
                 @media screen and (min-width: 1681px) {
                     font-size: 24px;
+                }
+            }
+        }
+    }
+
+    .place-for-you {
+        .accordion {
+            p {
+                @include font-size(24px);
+                margin-bottom: 0px;
+
+                @media screen and (min-width: 1441px) {
+                    font-size: 28px;
+                }
+
+                @media screen and (min-width: 1681px) {
+                    font-size: 34px;
+                }
+            }
+
+            .img-box {
+                text-align: right;
+
+                @include breakpoint(ipad-max) {
+                    text-align: center;
+                }
+
+                img {
+                    width: 260px;
+
+                    @include breakpoint(ipad-max) {
+                        width: 200px;
+                    }
                 }
             }
         }

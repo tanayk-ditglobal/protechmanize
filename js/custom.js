@@ -207,7 +207,7 @@ $(document).ready(function ($) {
     links.forEach((link) => {
       link.addEventListener("click", (event) => {
         const value = link.getAttribute("data-value"); // Get the value from the data-value attribute
-        const select = document.getElementById("mySelect");
+        const select = document.getElementById("inquirySelect");
         select.value = value; // Set the select value
       });
     });
