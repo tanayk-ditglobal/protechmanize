@@ -45,29 +45,73 @@ $(document).ready(function ($) {
       },
       1200: {
         items: 4,
-      }
+      },
     },
     onInitialized: updateProgress,
     onTranslated: updateProgress,
   });
 
   // benifits-perks-carousel
-  $('.benifits-perks-carousel').on('initialized.owl.carousel changed.owl.carousel', function (e) {
-    if (!e.namespace) {
-      return;
-    }
-    var carousel = e.relatedTarget;
-    $('.benifits-perks-carousel__counter').text(carousel.relative(carousel.current()) + 1 + '/' + carousel.items().length);
-  }).owlCarousel({
-    items: 1,
+  $(".benifits-perks-carousel")
+    .on("initialized.owl.carousel changed.owl.carousel", function (e) {
+      if (!e.namespace) {
+        return;
+      }
+      var carousel = e.relatedTarget;
+      $(".benifits-perks-carousel__counter").text(
+        carousel.relative(carousel.current()) +
+        1 +
+        "/" +
+        carousel.items().length
+      );
+    })
+    .owlCarousel({
+      items: 1,
+      loop: true,
+      margin: 10,
+      nav: true,
+      dots: false,
+      navText: [
+        "<img src='images/icons/long-arrow-left.svg' alt=''>",
+        "<img src='images/icons/long-arrow-right.svg' alt=''>",
+      ],
+    });
+
+  var owl2 = $('.career-banner-carosuel');
+  owl2.owlCarousel({
+    center: true,
+    items: 4,
     loop: true,
-    margin: 10,
-    nav: true,
+    margin: 0,
+    nav: false,
     dots: false,
-    navText: [
-      "<img src='images/icons/long-arrow-left.svg' alt=''>",
-      "<img src='images/icons/long-arrow-right.svg' alt=''>",
-    ],
+    mouseDrag: false,
+    touchDrag: false,
+    autoplay: true,
+    slideTransition: "linear",
+    autoplayTimeout: 3000,
+    autoplaySpeed: 3000,
+    autoplayHoverPause: false,
+    responsive: {
+      0: {
+        items: 1.25,
+      },
+      768: {
+        items: 2,
+      },
+      992: {
+        items: 3,
+      },
+      1200: {
+        items: 4,
+      },
+    },
+  });
+  $(".play").on("click", function () {
+    owl2.trigger("play.owl.autoplay", [3000]);
+  });
+  $(".stop").on("click", function () {
+    owl2.trigger("stop.owl.autoplay");
   });
 
   // Update the progress bar
@@ -80,8 +124,7 @@ $(document).ready(function ($) {
 
     var totalItems = event.item.count; // Total number of items
     var currentIndex =
-      (event.item.index - event.relatedTarget._clones.length / 2) %
-      totalItems;
+      (event.item.index - event.relatedTarget._clones.length / 2) % totalItems;
 
     // Adjust for negative index when looping
     if (currentIndex < 0) {
@@ -245,8 +288,7 @@ $(document).ready(function ($) {
         const itemWidth = item.offsetWidth;
         const marginRight =
           parseInt(getComputedStyle(item).marginRight, 10) || 0;
-        const marginLeft =
-          parseInt(getComputedStyle(item).marginLeft, 10) || 0;
+        const marginLeft = parseInt(getComputedStyle(item).marginLeft, 10) || 0;
         totalWidth += itemWidth + marginRight + marginLeft;
       });
       return totalWidth;
@@ -292,19 +334,20 @@ $(window).on("load", function () {
   // at a glance shadow for sticky effect
   if (document.getElementsByClassName("at-a-glance").length) {
     $(function () {
-      var shadowTop = $('.at-a-glance__shadow');
+      var shadowTop = $(".at-a-glance__shadow");
       var hieghtThreshold = $(".at-a-glance").offset().top - 200;
-      var hieghtThreshold_end = $(".at-a-glance").offset().top + $(".at-a-glance").height() - 200;
+      var hieghtThreshold_end =
+        $(".at-a-glance").offset().top + $(".at-a-glance").height() - 200;
       $(window).scroll(function () {
         var scroll = $(window).scrollTop();
 
         if (scroll >= hieghtThreshold && scroll <= hieghtThreshold_end) {
-          shadowTop.addClass('sticky');
+          shadowTop.addClass("sticky");
         } else {
-          shadowTop.removeClass('sticky');
+          shadowTop.removeClass("sticky");
         }
       });
-    })
+    });
   }
 
   // drag scroll carousel
@@ -352,7 +395,8 @@ $(window).on("load", function () {
         const scrollbarWidth = scrollbar.clientWidth; // Width of the custom scrollbar
 
         // Calculate the thumb's width as a proportion of the visible content
-        thumb.style.width = `${(visibleWidth / contentWidth) * scrollbarWidth}px`;
+        thumb.style.width = `${(visibleWidth / contentWidth) * scrollbarWidth
+          }px`;
 
         // Update the thumb's position based on the content's current scroll position
         updateThumbPosition();

@@ -235,3 +235,31 @@
         }
     }
 }
+
+.career-banner-carosuel {
+    .owl-stage {
+        display: flex;
+        align-items: center;
+    }
+
+    .item {
+        img {
+            max-height: 500px;
+            object-fit: cover;
+        }
+    }
+
+    &__actions {
+        text-align: center;
+        margin-top: 40px;
+
+        .btn {
+            padding: 0;
+            margin: 0 10px;
+
+            img {
+                width: 45px;
+            }
+        }
+    }
+}
