@@ -1,0 +1,45 @@
+.careers {
+    .what-we-believe {
+        p {
+            font-size: 16px;
+            margin-bottom: 50px;
+
+            @media screen and (min-width: 1441px) {
+                font-size: 25px;
+            }
+
+            @media screen and (min-width: 1681px) {
+                font-size: 30px;
+            }
+        }
+
+        ul {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 100px;
+
+            li {
+                flex: 45%;
+                width: 45%;
+                height: 450px;
+            }
+        }
+
+        .card {
+            height: 100%;
+
+            p {
+                font-size: 21px;
+                margin-bottom: 0px;
+
+                @media screen and (min-width: 1441px) {
+                    font-size: 20px;
+                }
+
+                @media screen and (min-width: 1681px) {
+                    font-size: 24px;
+                }
+            }
+        }
+    }
+}

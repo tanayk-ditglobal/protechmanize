@@ -1,4 +1,4 @@
-jQuery(document).ready(function ($) {
+$(document).ready(function ($) {
   // we-work-carousel
   $(".we-work-carousel").owlCarousel({
     loop: true,
