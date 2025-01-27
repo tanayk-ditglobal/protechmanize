@@ -1,4 +1,12 @@
 .careers {
+    @include breakpoint(ipad-max) {
+        padding-top: 73px;
+    }
+
+    @include breakpoint(mobile-max) {
+        padding-top: 45px;
+    }
+    
     .what-we-believe {
         p {
             font-size: 16px;
@@ -121,7 +129,7 @@
 
         .pinned-scroll {
             &::after {
-                content: '';
+                content: "";
                 width: 100%;
                 height: 20px;
                 background-color: var(--body-bg);

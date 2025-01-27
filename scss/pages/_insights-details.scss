@@ -1,4 +1,12 @@
 .insights-details {
+    @include breakpoint(ipad-max) {
+        padding-top: 73px;
+    }
+
+    @include breakpoint(mobile-max) {
+        padding-top: 45px;
+    }
+    
     &__content {
         &--inner {
             p {
