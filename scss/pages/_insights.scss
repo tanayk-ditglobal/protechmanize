@@ -11,6 +11,7 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
+            position: relative;
 
             @include breakpoint(ipad-max) {
                 flex-wrap: wrap;
@@ -18,11 +19,36 @@
             }
 
             h2 {
-                margin: 0;
                 line-height: 1;
             }
 
+            .mobile-only {
+                display: none;
+                position: absolute;
+                top: 0;
+                right: 0;
+
+                .btn {
+                    padding: 0;
+
+                    img {
+                        width: 22px;
+                        pointer-events: none;
+                    }
+                }
+
+                @include breakpoint(mobile-max) {
+                    display: block;
+                }
+            }
+
             &--btn {
+                @include breakpoint(mobile-max) {
+                    display: none;
+                }
+            }
+
+            &--btn-inner {
                 display: flex;
 
                 @include breakpoint(ipad-max) {
@@ -130,6 +156,53 @@
     }
 
     &-grid {
+        padding-top: 30px;
+
+        &__results {
+            margin-bottom: 30px;
+            display: flex;
+            justify-content: space-between;
+
+            span {
+                text-transform: capitalize;
+            }
+
+            a {
+                color: var(--body-color);
+            }
+
+            ul {
+                display: flex;
+                gap: 6px;
+            }
+
+            .badge {
+                margin: 0;
+                display: inline-flex;
+                align-items: center;
+                gap: 10px;
+
+                .btn {
+                    padding: 0;
+                    line-height: 1;
+                    display: inline-flex;
+
+                    img {
+                        width: 10px;
+                    }
+                }
+            }
+
+            &--left {
+                display: flex;
+                gap: 10px;
+
+                @include breakpoint(mobile-max) {
+                    flex-direction: column;
+                }
+            }
+        }
+
         a {
             display: block;
             font-weight: 300;
@@ -141,10 +214,17 @@
             padding: 20px;
             overflow: hidden;
 
+            @include breakpoint(portrait-mobile-max) {
+                min-height: 300px;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+            }
+
             &::before {
-                content: '';
+                content: "";
                 position: absolute;
-                background: linear-gradient(173.15deg, #0F0F0F 7.9%, rgba(255, 255, 255, 0) 53.65%);
+                background: linear-gradient(173.15deg, #0f0f0f 7.9%, rgba(255, 255, 255, 0) 53.65%);
                 width: 100%;
                 height: 100%;
                 left: 0;
@@ -153,7 +233,7 @@
             }
 
             &::after {
-                content: '';
+                content: "";
                 position: absolute;
                 width: 100%;
                 height: 100%;
@@ -163,6 +243,12 @@
                 transition: 0.3s;
                 opacity: 0;
                 visibility: hidden;
+
+                @include breakpoint(mobile-max) {
+                    background: rgba($black, 0.6);
+                    opacity: 1;
+                    visibility: visible;
+                }
             }
 
             img {
@@ -187,7 +273,7 @@
                     @media screen and (min-width: 1441px) {
                         font-size: 21px;
                     }
-        
+
                     @media screen and (min-width: 1681px) {
                         font-size: 26px;
                     }
@@ -195,11 +281,11 @@
 
                 span {
                     @include font-size(17px);
-        
+
                     @media screen and (min-width: 1441px) {
                         font-size: 20px;
                     }
-        
+
                     @media screen and (min-width: 1681px) {
                         font-size: 24px;
                     }
@@ -214,13 +300,17 @@
                 transition: 0.3s ease-in-out;
                 transform: translateX(calc(100% + 30px));
 
+                @include breakpoint(mobile-max) {
+                    transform: none;
+                }
+
                 p {
                     @include font-size(14px);
-        
+
                     @media screen and (min-width: 1441px) {
                         font-size: 16px;
                     }
-        
+
                     @media screen and (min-width: 1681px) {
                         font-size: 20px;
                     }
@@ -245,6 +335,10 @@
 
                 .insights-grid__content--bottom {
                     transform: translateX(0);
+
+                    @include breakpoint(mobile-max) {
+                        transform: none;
+                    }
                 }
             }
         }

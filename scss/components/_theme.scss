@@ -382,4 +382,30 @@
     .light-theme-logo {
         display: none;
     }
+
+    .insights {
+        &-filters {
+            &__content {
+                .mobile-only {
+                    .btn {
+                        img {
+                            filter: brightness(0) invert(1);
+                        }
+                    }
+                }
+            }
+        }
+
+        &-grid {
+            &__results {
+                .badge {
+                    .btn {
+                        img {
+                            filter: brightness(0) invert(1);
+                        }
+                    }
+                }
+            }
+        }
+    }
 }

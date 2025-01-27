@@ -215,6 +215,10 @@ $(document).ready(function ($) {
     $("body").toggleClass("overflow-hidden");
   });
 
+  $(".open-filter").click(function(){
+    $(".insights-filters__content--btn").slideToggle();
+  });
+
   // light and dark theme switch desktop
   const toggleSwitch = document.querySelector(
     '.theme-switch input[type="checkbox"]'
