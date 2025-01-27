@@ -89,9 +89,9 @@ $(document).ready(function ($) {
     touchDrag: false,
     autoplay: true,
     slideTransition: "linear",
-    autoplayTimeout: 3000,
-    autoplaySpeed: 3000,
-    smartSpeed: 1000,
+    autoplayTimeout: 4000,
+    autoplaySpeed: 4000,
+    // smartSpeed: 4000,
     autoplayHoverPause: false,
     responsive: {
       0: {
