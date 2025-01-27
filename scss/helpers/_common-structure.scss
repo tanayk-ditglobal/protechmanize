@@ -137,6 +137,12 @@ a {
     @media screen and (min-width: 1681px) {
         font-size: 80px;
     }
+
+    br {
+        @include breakpoint(mobile-max) {
+            display: none;
+        }
+    }
 }
 
 section {

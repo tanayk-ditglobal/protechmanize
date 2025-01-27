@@ -129,3 +129,109 @@
         }
     }
 }
+
+.benifits-perks-carousel {
+    h2 {
+        @include font-size(60px);
+        @extend .text-gradient;
+        margin-top: 20px;
+        margin-bottom: 50px;
+
+        @include breakpoint(mobile-max) {
+            margin-bottom: 35px;
+            margin-top: 0;
+        }
+
+        @media screen and (min-width: 1441px) {
+            font-size: 75px;
+        }
+
+        @media screen and (min-width: 1681px) {
+            font-size: 90px;
+        }
+    }
+
+    p {
+        @include font-size(33px);
+        margin-bottom: 15px;
+        min-height: 130px;
+
+        @media screen and (min-width: 1441px) {
+            font-size: 43px;
+        }
+
+        @media screen and (min-width: 1681px) {
+            font-size: 52px;
+        }
+    }
+
+    .img-box {
+        text-align: center;
+
+        img {
+           @include breakpoint(ipad-min) {
+            width: 90%;
+           }
+        }
+    }
+
+    .owl-nav {
+        position: absolute;
+        left: 0;
+        top: 100%;
+        margin-top: 10px;
+
+        button {
+            border: 1px solid var(--body-color) !important;
+            border-radius: 50% !important;
+            width: 40px;
+            height: 40px;
+            margin: 5px 10px !important;
+            display: inline-flex !important;
+            align-items: center;
+            justify-content: center;
+
+            img {
+                width: 21px;
+            }
+
+            @media screen and (min-width: 1441px) {
+                width: 50px;
+                height: 50px;
+
+                img {
+                    width: auto;
+                }
+            }
+
+            &:hover {
+                background-color: transparent !important;
+            }
+        }
+
+        .disabled {
+            cursor: not-allowed;
+        }
+    }
+
+    &__counter {
+        margin-left: 160px;
+        margin-top: 22px;
+        font-size: 16px;
+        display: inline-block;
+
+        @include breakpoint(ipad-max) {
+            margin-left: 0;
+            text-align: center;
+            display: block;
+        }
+
+        @media screen and (min-width: 1441px) {
+            font-size: 20px;
+        }
+
+        @media screen and (min-width: 1681px) {
+            font-size: 24px;
+        }
+    }
+}

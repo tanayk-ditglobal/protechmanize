@@ -18,9 +18,22 @@
             flex-wrap: wrap;
             gap: 100px;
 
+            @include breakpoint(ipad-max) {
+                gap: 70px;
+            }
+
             li {
                 flex: 45%;
                 width: 45%;
+
+                @include breakpoint(large-desktop-min) {
+                    min-height: 400px;
+                }
+
+                @include breakpoint(mobile-max) {
+                    flex: 100%;
+                    width: 100%;
+                }
             }
         }
 
@@ -86,9 +99,220 @@
 
                 img {
                     width: 260px;
+                    margin: 20px 0;
 
                     @include breakpoint(ipad-max) {
                         width: 200px;
+                    }
+                }
+            }
+        }
+    }
+
+    .candidate-journey {
+        &-title {
+            position: sticky;
+            top: 85px;
+
+            @include breakpoint(mobile-max) {
+                top: 70px;
+            }
+        }
+
+        .pinned-scroll {
+            &::after {
+                content: '';
+                width: 100%;
+                height: 20px;
+                background-color: var(--body-bg);
+                position: absolute;
+                top: 100%;
+                left: 0;
+            }
+
+            .horizontal-scroll {
+                padding: 110px 0;
+                background-color: var(--body-bg);
+
+                @include breakpoint(mobile-max) {
+                    padding: 90px 0;
+                    top: 190px;
+                }
+            }
+        }
+
+        &__content {
+            border-top: 1px solid var(--body-color);
+            min-width: 360px;
+            max-width: 360px;
+            position: relative;
+            padding-top: 90px;
+            margin-right: 60px;
+
+            &:first-child {
+                margin-left: 15px;
+            }
+
+            &:last-child {
+                margin-right: 15px;
+            }
+
+            &:not(:last-child) {
+                margin-right: 60px;
+            }
+
+            @include breakpoint(large-desktop-min) {
+                &:first-child {
+                    margin-left: 100px;
+                }
+
+                &:last-child {
+                    margin-right: 100px;
+                }
+            }
+
+            @media screen and (min-width: 1681px) {
+                &:first-child {
+                    margin-left: 120px;
+                }
+
+                &:last-child {
+                    margin-right: 120px;
+                }
+            }
+
+            @include breakpoint(mobile-max) {
+                min-width: 275px;
+
+                &:not(:last-child) {
+                    margin-right: 30px;
+                }
+            }
+
+            h3 {
+                @include font-size(62px);
+                margin-bottom: 30px;
+                font-weight: 100;
+                @extend .text-gradient;
+
+                @media screen and (min-width: 1441px) {
+                    font-size: 73px;
+                }
+
+                @media screen and (min-width: 1681px) {
+                    font-size: 88px;
+                }
+            }
+
+            span {
+                @include font-size(19px);
+                margin-bottom: 0px;
+                font-weight: 700;
+
+                @media screen and (min-width: 1441px) {
+                    font-size: 23px;
+                }
+
+                @media screen and (min-width: 1681px) {
+                    font-size: 28px;
+                }
+            }
+
+            p {
+                @include font-size(18px);
+                margin-bottom: 0px;
+
+                @media screen and (min-width: 1441px) {
+                    font-size: 20px;
+                }
+
+                @media screen and (min-width: 1681px) {
+                    font-size: 24px;
+                }
+            }
+        }
+
+        .apply-container {
+            background-color: var(--body-bg);
+            position: relative;
+            z-index: 1;
+
+            @include breakpoint(mobile-max) {
+                margin-bottom: 50px;
+            }
+        }
+    }
+
+    .join-our-team {
+        background: linear-gradient(180deg, #0735fa -30.33%, #9473e4 109.02%);
+
+        @include breakpoint(ipad-max) {
+            padding: 100px 0;
+        }
+
+        @include breakpoint(mobile-max) {
+            padding: 70px 0;
+        }
+
+        &__content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            @include breakpoint(ipad-max) {
+                flex-wrap: wrap;
+            }
+
+            > div {
+                @include breakpoint(ipad-min) {
+                    width: 50%;
+                }
+            }
+
+            h2 {
+                margin-bottom: 40px;
+                @include font-size(40px);
+                color: $white;
+                font-weight: 300;
+
+                @media screen and (min-width: 1441px) {
+                    font-size: 54px;
+                }
+
+                @media screen and (min-width: 1681px) {
+                    font-size: 64px;
+                }
+            }
+
+            p {
+                @include font-size(18px);
+                margin-bottom: 0px;
+                color: $white;
+
+                @media screen and (min-width: 1441px) {
+                    font-size: 20px;
+                }
+
+                @media screen and (min-width: 1681px) {
+                    font-size: 24px;
+                }
+            }
+
+            .btn-outline-light {
+                display: inline-flex;
+                align-items: center;
+                gap: 15px;
+
+                img {
+                    position: relative;
+                    width: 21px;
+                    transition: 0.3s;
+                }
+
+                &:hover {
+                    img {
+                        transform: translateX(8px);
+                        filter: brightness(0%);
                     }
                 }
             }

@@ -6,12 +6,11 @@
     right: -100%;
     width: 100%;
     transition: 0.3s ease-in-out;
-    border-top: 1px solid rgba(#fff, 0.5);
     display: flex;
     align-items: center;
 
     @include breakpoint(mobile-max) {
-        top: 52px;
+        top: 55px;
     }
 
     .form-control {

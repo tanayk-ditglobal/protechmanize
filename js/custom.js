@@ -51,6 +51,25 @@ $(document).ready(function ($) {
     onTranslated: updateProgress,
   });
 
+  // benifits-perks-carousel
+  $('.benifits-perks-carousel').on('initialized.owl.carousel changed.owl.carousel', function (e) {
+    if (!e.namespace) {
+      return;
+    }
+    var carousel = e.relatedTarget;
+    $('.benifits-perks-carousel__counter').text(carousel.relative(carousel.current()) + 1 + '/' + carousel.items().length);
+  }).owlCarousel({
+    items: 1,
+    loop: true,
+    margin: 10,
+    nav: true,
+    dots: false,
+    navText: [
+      "<img src='images/icons/long-arrow-left.svg' alt=''>",
+      "<img src='images/icons/long-arrow-right.svg' alt=''>",
+    ],
+  });
+
   // Update the progress bar
   function updateProgress(event) {
     // Ensure event and event.item are defined
@@ -268,7 +287,7 @@ $(document).ready(function ($) {
   }
 });
 
-$(window).on("load", function(){
+$(window).on("load", function () {
   // executes when complete page is fully loaded, including all frames, objects and images
   // at a glance shadow for sticky effect
   if (document.getElementsByClassName("at-a-glance").length) {
