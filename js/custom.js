@@ -136,9 +136,9 @@ $(document).ready(function ($) {
     var progress = ((currentIndex + 1) / totalItems) * 100;
     $progressBar.css("width", progress + "%");
 
-    console.log(
-      `Current Index: ${currentIndex}, Total Items: ${totalItems}, Progress: ${progress}%`
-    );
+    // console.log(
+    //   `Current Index: ${currentIndex}, Total Items: ${totalItems}, Progress: ${progress}%`
+    // );
   }
 
   // about-us scroll buttons
