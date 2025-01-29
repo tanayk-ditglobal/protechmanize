@@ -337,7 +337,7 @@
             }
 
             @include breakpoint(mobile-max) {
-                height: calc(100dvh - 54px);
+                height: calc(100dvh - 55px);
             }
         }
     }
@@ -346,6 +346,7 @@
         position: relative;
         z-index: 1;
         margin-left: 25px;
+        padding-top: 0;
 
         @include breakpoint(large-desktop-min) {
             margin-left: 50px;
@@ -353,7 +354,6 @@
 
         @include breakpoint(ipad-max) {
             margin-left: 0;
-            margin-top: 35px;
         }
 
         .btn {
