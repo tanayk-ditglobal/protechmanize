@@ -354,6 +354,7 @@
 
         @include breakpoint(ipad-max) {
             margin-left: 0;
+            margin-top: 15px;
         }
 
         .btn {
