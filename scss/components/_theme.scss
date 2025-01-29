@@ -352,6 +352,14 @@
             }
         }
     }
+
+    .career-banner-carosuel {
+        &__actions {
+            img {
+                filter: brightness(0);
+            }
+        }
+    }
 }
 
 // dark theme colors
