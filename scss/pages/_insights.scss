@@ -134,6 +134,7 @@
                     .form-check {
                         padding: 10px 20px 10px 40px;
                         font-weight: 400;
+                        margin: 0;
 
                         &:hover {
                             background-color: #e9e9e9;
@@ -204,6 +205,11 @@
                     img {
                         width: 10px;
                     }
+                }
+
+                &.bg-light {
+                    color: var(--body-bg);
+                    background-color: var(--body-color) !important;
                 }
             }
 

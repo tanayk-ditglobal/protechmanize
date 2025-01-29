@@ -226,3 +226,30 @@ section {
         }
     }
 }
+
+.page-2 {
+    font-family: $sohne-font;
+
+    .about-us {
+        .who-we-are {
+            &__content {
+                h3 {
+                    font-weight: normal;
+                    @include font-size(70px);
+    
+                    @media screen and (min-width: 1441px) {
+                        font-size: 80px;
+                    }
+    
+                    @media screen and (min-width: 1681px) {
+                        font-size: 100px;
+                    }
+    
+                    @include breakpoint(mobile-max) {
+                        margin-bottom: 5px;
+                    }
+                }
+            }
+        }
+    }
+}
