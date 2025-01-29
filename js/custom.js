@@ -77,7 +77,9 @@ $(document).ready(function ($) {
       ],
     });
 
+  // career-banner-carosuel  
   var owl2 = $('.career-banner-carosuel');
+  var isPlaying = true;
   owl2.owlCarousel({
     center: true,
     items: 4,
@@ -108,11 +110,15 @@ $(document).ready(function ($) {
       },
     },
   });
-  $(".play").on("click", function () {
-    owl2.trigger("play.owl.autoplay", [3000]);
-  });
-  $(".stop").on("click", function () {
-    owl2.trigger("stop.owl.autoplay");
+  $("#playpausebtn").on("click", function () {
+    if (isPlaying) {
+      owl2.trigger("stop.owl.autoplay");
+      $(this).html('<img src="images/icons/play.svg" class="img-fluid" alt="">');
+    } else {
+      owl2.trigger("play.owl.autoplay");
+      $(this).html('<img src="images/icons/pause.svg" class="img-fluid" alt="">');
+    }
+    isPlaying = !isPlaying;
   });
 
   // Update the progress bar
@@ -215,7 +221,7 @@ $(document).ready(function ($) {
     $("body").toggleClass("overflow-hidden");
   });
 
-  $(".open-filter").click(function(){
+  $(".open-filter").click(function () {
     $(".insights-filters__content--btn").slideToggle();
   });
 

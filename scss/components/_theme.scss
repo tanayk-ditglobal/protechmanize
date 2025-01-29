@@ -1,10 +1,7 @@
 // light theme colors
 [data-theme="light"] {
-    --primary-color: #7828d6;
-    --secondary-color: #7129f6;
     --body-bg: #ffffff;
     --body-color: #111111;
-    --form-input-bg: #ffffff;
 
     .btn-link {
         img {
@@ -342,16 +339,25 @@
         &-filters {
             background-color: #e6e8ec;
         }
+
+        &-grid {
+            &__results {
+                .badge {
+                    .btn {
+                        img {
+                            filter: brightness(0);
+                        }
+                    }
+                }
+            }
+        }
     }
 }
 
 // dark theme colors
 [data-theme="dark"] {
-    --primary-color: #7828d6;
-    --secondary-color: #7129f6;
     --body-bg: #111111;
     --body-color: #ffffff;
-    --form-input-bg: #ffffff33;
 
     .header {
         &__top {
@@ -387,18 +393,6 @@
         &-filters {
             &__content {
                 .mobile-only {
-                    .btn {
-                        img {
-                            filter: brightness(0) invert(1);
-                        }
-                    }
-                }
-            }
-        }
-
-        &-grid {
-            &__results {
-                .badge {
                     .btn {
                         img {
                             filter: brightness(0) invert(1);

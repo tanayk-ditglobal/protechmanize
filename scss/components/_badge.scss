@@ -1,28 +1,31 @@
 .badge {
     font-size: 14px;
-    position: relative;
-    background-color: var(--body-bg);
-    color: var(--body-color);
-    border-radius: 4px;
-    margin-bottom: 20px;
-
-    &::before {
-        content: "";
-        position: absolute;
-        left: -1.5px;
-        top: -1.5px;
-        background: linear-gradient(180deg, #0735fa -30.33%, #9473e4 109.02%);
-        width: calc(100% + 3px);
-        height: calc(100% + 3px);
-        z-index: -1;
-        border-radius: 4px;
-    }
-
+    
     @media screen and (min-width: 1441px) {
         font-size: 16px;
     }
 
     @media screen and (min-width: 1681px) {
         font-size: 20px;
+    }
+
+    &-custom {
+        background-color: var(--body-bg);
+        color: var(--body-color);
+        position: relative;
+        border-radius: 4px;
+        margin-bottom: 20px;
+
+        &::before {
+            content: "";
+            position: absolute;
+            left: -1.5px;
+            top: -1.5px;
+            background: linear-gradient(180deg, #0735fa -30.33%, #9473e4 109.02%);
+            width: calc(100% + 3px);
+            height: calc(100% + 3px);
+            z-index: -1;
+            border-radius: 4px;
+        }
     }
 }
