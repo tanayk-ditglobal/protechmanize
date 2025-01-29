@@ -95,3 +95,17 @@
     font-style: normal;
     font-display: swap;
 }
+
+@font-face {
+    font-family: "Sohne-Buch";
+    src: url("../fonts/Sohne-Buch.eot");
+    src:
+        url("../fonts/Sohne-Buch.eot?#iefix") format("embedded-opentype"),
+        url("../fonts/Sohne-Buch.woff2") format("woff2"),
+        url("../fonts/Sohne-Buch.woff") format("woff"),
+        url("../fonts/Sohne-Buch.ttf") format("truetype"),
+        url("../fonts/Sohne-Buch.svg#Sohne-Buch") format("svg");
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
