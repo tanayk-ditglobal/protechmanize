@@ -24,6 +24,10 @@ html {
     }
 }
 
+html:not(.theme-loaded) {
+    visibility: hidden;
+}
+
 body {
     font-size: 1rem;
     font-family: $primary-font;

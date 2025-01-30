@@ -3,11 +3,11 @@
     position: relative;
     padding: 0;
     margin: 0;
+    background-color: #111;
 
     @include breakpoint(ipad-max) {
         height: auto;
         padding-top: 83px;
-        background-color: #111;
     }
 
     @include breakpoint(mobile-max) {

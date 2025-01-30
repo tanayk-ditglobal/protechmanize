@@ -1,3 +1,49 @@
+// light and dark theme switch desktop
+const toggleSwitch = document.querySelector(
+  '.theme-switch input[type="checkbox"]'
+);
+const currentTheme = localStorage.getItem("theme");
+if (currentTheme) {
+  document.documentElement.setAttribute("data-theme", currentTheme);
+
+  if (currentTheme === "light") {
+    toggleSwitch.checked = true;
+  }
+}
+function switchTheme(e) {
+  if (e.target.checked) {
+    document.documentElement.setAttribute("data-theme", "light");
+    localStorage.setItem("theme", "light");
+  } else {
+    document.documentElement.setAttribute("data-theme", "dark");
+    localStorage.setItem("theme", "dark");
+  }
+}
+toggleSwitch.addEventListener("change", switchTheme, false);
+
+// light and dark theme switch mobile
+const toggleSwitch2 = document.querySelector(
+  '.theme-switch-2 input[type="checkbox"]'
+);
+const currentTheme2 = localStorage.getItem("theme");
+if (currentTheme) {
+  document.documentElement.setAttribute("data-theme", currentTheme);
+
+  if (currentTheme === "light") {
+    toggleSwitch2.checked = true;
+  }
+}
+function switchTheme(e) {
+  if (e.target.checked) {
+    document.documentElement.setAttribute("data-theme", "light");
+    localStorage.setItem("theme", "light");
+  } else {
+    document.documentElement.setAttribute("data-theme", "dark");
+    localStorage.setItem("theme", "dark");
+  }
+}
+toggleSwitch2.addEventListener("change", switchTheme, false);
+
 $(document).ready(function ($) {
   // we-work-carousel
   $(".we-work-carousel").owlCarousel({
@@ -77,8 +123,8 @@ $(document).ready(function ($) {
       ],
     });
 
-  // career-banner-carosuel  
-  var owl2 = $('.career-banner-carosuel');
+  // career-banner-carosuel
+  var owl2 = $(".career-banner-carosuel");
   var isPlaying = true;
   owl2.owlCarousel({
     center: true,
@@ -113,10 +159,14 @@ $(document).ready(function ($) {
   $("#playpausebtn").on("click", function () {
     if (isPlaying) {
       owl2.trigger("stop.owl.autoplay");
-      $(this).html('<img src="images/icons/play.svg" class="img-fluid" alt="">');
+      $(this).html(
+        '<img src="images/icons/play.svg" class="img-fluid" alt="">'
+      );
     } else {
       owl2.trigger("play.owl.autoplay");
-      $(this).html('<img src="images/icons/pause.svg" class="img-fluid" alt="">');
+      $(this).html(
+        '<img src="images/icons/pause.svg" class="img-fluid" alt="">'
+      );
     }
     isPlaying = !isPlaying;
   });
@@ -224,52 +274,6 @@ $(document).ready(function ($) {
   $(".open-filter").click(function () {
     $(".insights-filters__content--btn").slideToggle();
   });
-
-  // light and dark theme switch desktop
-  const toggleSwitch = document.querySelector(
-    '.theme-switch input[type="checkbox"]'
-  );
-  const currentTheme = localStorage.getItem("theme");
-  if (currentTheme) {
-    document.documentElement.setAttribute("data-theme", currentTheme);
-
-    if (currentTheme === "light") {
-      toggleSwitch.checked = true;
-    }
-  }
-  function switchTheme(e) {
-    if (e.target.checked) {
-      document.documentElement.setAttribute("data-theme", "light");
-      localStorage.setItem("theme", "light");
-    } else {
-      document.documentElement.setAttribute("data-theme", "dark");
-      localStorage.setItem("theme", "dark");
-    }
-  }
-  toggleSwitch.addEventListener("change", switchTheme, false);
-
-  // light and dark theme switch mobile
-  const toggleSwitch2 = document.querySelector(
-    '.theme-switch-2 input[type="checkbox"]'
-  );
-  const currentTheme2 = localStorage.getItem("theme");
-  if (currentTheme) {
-    document.documentElement.setAttribute("data-theme", currentTheme);
-
-    if (currentTheme === "light") {
-      toggleSwitch2.checked = true;
-    }
-  }
-  function switchTheme(e) {
-    if (e.target.checked) {
-      document.documentElement.setAttribute("data-theme", "light");
-      localStorage.setItem("theme", "light");
-    } else {
-      document.documentElement.setAttribute("data-theme", "dark");
-      localStorage.setItem("theme", "dark");
-    }
-  }
-  toggleSwitch2.addEventListener("change", switchTheme, false);
 
   // select link pass value to select
   if (document.getElementsByClassName("contact-us__accordion").length) {
