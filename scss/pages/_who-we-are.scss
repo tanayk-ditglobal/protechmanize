@@ -20,6 +20,10 @@
             pointer-events: none;
             width: 65%;
 
+            @include breakpoint(desktop-max) {
+                width: 85%;
+            }
+
             @include breakpoint(ipad-max) {
                 width: 80%;
             }
