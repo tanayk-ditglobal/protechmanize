@@ -10,9 +10,6 @@
         z-index: 99;
         background-color: var(--body-bg);
 
-        // background: rgba(var(--body-color), 0.6);
-        // backdrop-filter: blur(25px);
-
         @include breakpoint(ipad-max) {
             position: fixed;
             width: 100%;
@@ -188,6 +185,10 @@
             font-weight: 500;
             gap: 40px;
 
+            @include breakpoint(medium-large-desktop-max) {
+                gap: 30px;
+            }
+
             @include breakpoint(desktop-max) {
                 gap: 25px;
             }
@@ -350,6 +351,10 @@
 
         @include breakpoint(large-desktop-min) {
             margin-left: 50px;
+        }
+
+        @include breakpoint(medium-large-desktop-max) {
+            margin-left: 40px;
         }
 
         @include breakpoint(ipad-max) {
