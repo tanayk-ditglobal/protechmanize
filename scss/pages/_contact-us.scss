@@ -163,6 +163,7 @@
 
     .support {
         background: linear-gradient(180deg, #0735fa -30.33%, #9473e4 109.02%);
+        padding: 50px 0;
 
         @include breakpoint(ipad-max) {
             padding: 100px 0;
