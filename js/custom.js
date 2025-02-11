@@ -525,3 +525,31 @@ $(window).on("load", function () {
     });
   }
 });
+
+// open accordion after page redirect
+document.addEventListener("DOMContentLoaded", function () {
+  // Get the accordion parameter from URL
+  const urlParams = new URLSearchParams(window.location.search);
+  const accordionId = urlParams.get("accordion");
+
+  if (accordionId) {
+    // Open the accordion
+    const accordionElement = document.getElementById(accordionId);
+    if (accordionElement) {
+      new bootstrap.Collapse(accordionElement, { show: true });
+
+      // Scroll smoothly with offset (accounting for fixed navbar)
+      setTimeout(() => {
+        const offset = 160; // Adjust based on navbar height
+        const elementPosition =
+          accordionElement.getBoundingClientRect().top + window.scrollY;
+        const offsetPosition = elementPosition - offset;
+
+        window.scrollTo({
+          top: offsetPosition,
+          behavior: "smooth",
+        });
+      }, 300); // Delay ensures the accordion is expanded before scrolling
+    }
+  }
+});
