@@ -190,6 +190,8 @@
             &-box {
                 flex: 1;
                 height: 100%;
+                color: var(--body-color);
+                display: block;
 
                 &__top {
                     padding: 100px 40px;

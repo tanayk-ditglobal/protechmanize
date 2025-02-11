@@ -11,10 +11,10 @@
         padding-bottom: 0;
 
         &--inner {
-            margin-bottom: 150px;
+            padding: 70px 0;
 
             @include breakpoint(mobile-max) {
-                margin-bottom: 100px;
+                padding: 60px 0;
             }
 
             .card {

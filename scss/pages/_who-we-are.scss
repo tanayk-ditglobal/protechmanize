@@ -579,7 +579,8 @@
         }
 
         &__content {
-            flex: 33%;
+            flex: 31%;
+            min-width: 31%;
             height: 100%;
             color: var(--body-color);
 
