@@ -10,9 +10,11 @@
     &-filters {
         background-color: #2d2d32;
         padding: 0;
+        margin-bottom: 50px;
 
         @include breakpoint(ipad-max) {
             padding: 15px;
+            margin-bottom: 0;
         }
 
         &__content {
