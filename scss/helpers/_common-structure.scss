@@ -30,6 +30,8 @@ a {
 }
 
 .container-fluid {
+    max-width: 1920px;
+
     @include breakpoint(large-desktop-min) {
         padding: 0 100px;
     }
