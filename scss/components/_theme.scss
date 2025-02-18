@@ -297,6 +297,10 @@
                 }
 
                 .btn-outline-light {
+                    &:hover {
+                        color: var(--body-color);
+                    }
+
                     img {
                         filter: brightness(0);
                     }

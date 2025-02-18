@@ -6,6 +6,12 @@
     @include breakpoint(mobile-max) {
         padding-top: 45px;
     }
+
+    .inner-page-banner {
+        .banner-links {
+            top: 50% !important;
+        }
+    }
     
     &__contacts {
         &--content {
@@ -317,6 +323,8 @@
                 }
 
                 &:hover {
+                    color: var(--body-bg);
+
                     img {
                         transform: translateX(8px);
                         filter: brightness(0%);
